@@ -12,17 +12,17 @@
   <meta property="og:url" content="https://blueclarityone.github.io/math-timeline/">
   <meta property="og:title" content="What has AI already solved? | Blue Clarity">
   <meta property="og:description" content="Nine famous maths problems. Two proofs and one disproof with AI. Explore what’s still open and what’s at stake.">
-  <meta property="og:image" content="https://blueclarityone.github.io/math-timeline/proof-tracker-share.png?v=clarity-1">
+  <meta property="og:image" content="https://blueclarityone.github.io/math-timeline/proof-tracker-share.png?v=timeline-1">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="The Proof Tracker by Blue Clarity. What has AI already solved? Nine maths problems, two proofs, one disproof. A surface plot shows three zeros of Riemann’s zeta function.">
+  <meta property="og:image:alt" content="The Proof Tracker by Blue Clarity. What has AI already solved? Nine maths problems, two proofs, one disproof. A timeline marks the Erdős, cycle double cover and Riemann results in 2026.">
   <meta name="twitter:creator" content="@blue_clarity">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="What has AI already solved? | Blue Clarity">
   <meta name="twitter:description" content="Nine famous maths problems. Two proofs and one disproof with AI. Explore what’s still open and what’s at stake.">
-  <meta name="twitter:image" content="https://blueclarityone.github.io/math-timeline/proof-tracker-share.png?v=clarity-1">
-  <meta name="twitter:image:alt" content="The Proof Tracker by Blue Clarity. What has AI already solved? Nine maths problems, two proofs, one disproof. A surface plot shows three zeros of Riemann’s zeta function.">
+  <meta name="twitter:image" content="https://blueclarityone.github.io/math-timeline/proof-tracker-share.png?v=timeline-1">
+  <meta name="twitter:image:alt" content="The Proof Tracker by Blue Clarity. What has AI already solved? Nine maths problems, two proofs, one disproof. A timeline marks the Erdős, cycle double cover and Riemann results in 2026.">
   <link rel="icon" type="image/png" sizes="160x160" href="./clarity-mark.png">
   <link rel="preload" href="./assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <style>@font-face{font-family:Inter;src:url("./assets/inter-latin.woff2") format("woff2");font-style:normal;font-weight:100 900;font-display:swap}
@@ -44,7 +44,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 .mast{border-bottom:1px solid #293440}.nav{min-height:78px;display:flex;align-items:center;gap:46px}
 .brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font-weight:700;letter-spacing:-.055em;font-size:1.26rem;white-space:nowrap}
 .brand img{display:block;width:38px;height:38px;flex:none}.brand-type{display:grid;gap:2px;line-height:1}.owner{font:650 .68rem/1.08 var(--sans);letter-spacing:.028em;color:var(--blue)}.publication{font-weight:650;letter-spacing:-.048em}
-.nav nav{display:flex;gap:26px}.nav nav a,.edition,.plot-key+span,.stat small{color:#c1ccd6}.nav nav a{white-space:nowrap;font-weight:500;font-size:.85rem;text-decoration:none}.nav nav a:hover,.proof-link:hover,.foot summary:hover{text-decoration:underline;text-underline-offset:4px}
+.nav nav{display:flex;gap:26px}.nav nav a,.edition,.stat small{color:#c1ccd6}.nav nav a{white-space:nowrap;font-weight:500;font-size:.85rem;text-decoration:none}.nav nav a:hover,.proof-link:hover,.foot summary:hover{text-decoration:underline;text-underline-offset:4px}
 .edition{margin-left:auto;font: .8rem var(--mono)}.edition time{color:#ecece5}
 .hero{display:grid;grid-template-columns:1.08fr 1fr;gap:4%;align-items:center;padding:52px 0 43px}
 .kicker,.overline{display:flex;align-items:center;gap:11px;font:700 .76rem/1.2 var(--mono);letter-spacing:.13em;text-transform:uppercase}
@@ -53,13 +53,35 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 .hero h1 em,.stakes h2 em{color:var(--blue);font-style:normal;font-weight:480;letter-spacing:-.078em}
 .lede{max-width:46ch;font-size:clamp(1rem,1.35vw,1.2rem);line-height:1.52;color:#c5cdd6}
 .proof-link{display:inline-flex;gap:10px;align-items:center;margin-top:18px;padding-bottom:3px;border-bottom:1px solid #517c8f;text-decoration:none;font-weight:600;font-size:.95rem;color:#eaf8ff}.proof-link span{color:var(--blue)}
-.plate{min-width:0;position:relative;display:flex;flex-direction:column;overflow:hidden;justify-content:space-between;align-self:center;border:1px solid #375575;border-radius:4px;background-color:#102744;background-image:linear-gradient(#78acd112 1px,transparent 1px),linear-gradient(90deg,#78acd112 1px,transparent 1px),radial-gradient(ellipse at 70% 30%,#1c4064,transparent 88%);background-size:24px 24px,24px 24px,100% 100%}
-#surface{display:block;width:100%;height:clamp(190px,16.5vw,255px)}
-.plate figcaption{display:flex;align-items:center;gap:9px;padding:10px 15px;color:#d1e4f3;font:.72rem/1.4 var(--mono);border-top:1px solid #57789b70;background:#0a1b30bb}
-.plot-key{width:6px;height:6px;border-radius:50%;background:#e2faff;outline:1px solid #a8d8eaaa;outline-offset:2px;flex:none}
-.plot-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 13px;font:550 .76rem var(--sans);color:#e4f3ff;background:#0a1b30ad;border-bottom:1px solid #57789b70}
-.plot-title{display:flex;align-items:center;gap:9px}.plot-title b{font:italic 1.36rem/1 Georgia,serif;color:#c7e9f7;padding-right:9px;border-right:1px solid #60809b}
-.plot-switch{display:flex;border:1px solid #6684a0;border-radius:2px;overflow:hidden}.plot-switch button{border:0;color:#d5e5f1;background:#0c2037;padding:5px 8px;font:.72rem var(--mono)}.plot-switch button[aria-pressed=true]{color:#0e2638;background:var(--blue)}.plot-switch button:focus-visible{outline-offset:-3px}
+.visually-hidden,.history-filter input{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.proof-history{min-width:0;align-self:start;scroll-margin-top:16px;padding:20px 23px 5px;border:1px solid #364c60;border-radius:4px;background:linear-gradient(145deg,#142638,#0c1621 75%);color:#f1f6fa}
+.history-header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.history-header h2{font-size:clamp(1.35rem,2.1vw,1.85rem);line-height:1.1;letter-spacing:-.055em;font-weight:600}
+.history-header>span{color:#adbfce;font:.76rem/1.25 var(--mono)}
+.history-filter{display:inline-flex;max-width:100%;padding:3px;margin:13px 0 5px;gap:2px;min-width:0;border:1px solid #395064;border-radius:4px;background:#08131e}
+.history-filter label{cursor:pointer;position:relative}
+.history-filter label>span{display:flex;align-items:center;gap:7px;padding:5px 9px;border-radius:2px;color:#bfd0dd;font:550 .875rem/1.28 var(--sans)}
+.history-filter b{font:500 .78rem/1 var(--mono);opacity:.85}
+.history-filter input:checked+span{background:var(--blue);color:#102431}
+.history-filter input:focus-visible+span{outline:2px solid white;outline-offset:2px}
+.history-filter label:hover span{text-decoration:underline;text-underline-offset:3px}
+.milestones{list-style:none;padding:0;margin:0}
+.milestone a{display:grid;grid-template-columns:58px 17px minmax(0,1fr);gap:8px;align-items:stretch;min-height:63px;color:inherit;text-decoration:none}
+.milestone time{display:block;padding-top:16px;color:#b8d7e8;font:550 .88rem/1.2 var(--mono);white-space:nowrap}
+.milestone time small{display:block;color:#aabac9;font-size:.72rem;margin-top:3px}
+.rail{position:relative;display:block}
+.rail::before{content:"";position:absolute;top:0;bottom:0;left:7px;width:1px;background:#476074}
+.rail::after{content:"";position:absolute;top:20px;left:4px;width:5px;height:5px;background:#142638;border:1px solid #91b0c4;border-radius:50%}
+.resolution .rail::after{background:var(--mint);border-color:var(--mint)}
+.milestone:first-child .rail::before{top:23px}
+.milestone:last-child .rail::before,.proof-history:has(input[value="resolutions"]:checked) .resolution:not(:has(~.resolution)) .rail::before{bottom:auto;height:23px}
+.milestone-copy{display:block;border-bottom:1px solid #293e4f;padding:12px 0 11px}
+.milestone:last-child .milestone-copy,.proof-history:has(input[value="resolutions"]:checked) .resolution:not(:has(~.resolution)) .milestone-copy{border-bottom-color:transparent}
+.milestone-copy b{display:block;font-size:1.03rem;line-height:1.32;font-weight:600;letter-spacing:-.03em}
+.milestone-copy>span{display:block;margin-top:3px;color:#bbcad5;font-size:.875rem;line-height:1.4}
+.milestone a:hover b,.milestone a:focus-visible b{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+.proof-history:has(input[value="resolutions"]:checked) .milestone:not(.resolution){display:none}
+@media(min-width:721px){.hero:has(input[value="all"]:checked){align-items:start}}
 .totals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #3b4854;padding:23px 0 27px;gap:18px}
 .stat{display:flex;flex-wrap:wrap;align-items:center;gap:8px clamp(10px,1.4vw,23px);text-decoration:none;position:relative;min-width:0}
 .stat+.stat{border-left:1px solid #303d49;padding-left:clamp(16px,3vw,53px)}
@@ -69,8 +91,8 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 .score-strip{display:flex;gap:3px;flex-basis:100%}.score-strip i{height:3px;width:9px;background:#37404b}.score-strip .on{background:var(--outcome)}.stat small.breakdown{display:block}.breakdown span{white-space:nowrap}
 .stat:hover b{text-decoration:underline;text-underline-offset:4px}.won strong{color:var(--mint)}.pending strong{color:var(--amber)}.prior strong{color:var(--lavender)}
 .catalogue{padding-block:48px 56px}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:25px}
-.overline{color:#31576e}.section-head h2,.chronology h2{font-size:clamp(2rem,3.25vw,3.7rem);letter-spacing:-.065em;line-height:1.06;font-weight:650;margin-top:9px}
-.filters{position:relative}.filters>summary,.earlier>summary{border:1px solid #aeb5b3;display:inline-flex;gap:12px;align-items:center;border-radius:3px;padding:8px 13px;background:transparent;font-size:.9rem;font-weight:600;white-space:nowrap}
+.overline{color:#31576e}.section-head h2{font-size:clamp(2rem,3.25vw,3.7rem);letter-spacing:-.065em;line-height:1.06;font-weight:650;margin-top:9px}
+.filters{position:relative}.filters>summary{border:1px solid #aeb5b3;display:inline-flex;gap:12px;align-items:center;border-radius:3px;padding:8px 13px;background:transparent;font-size:.9rem;font-weight:600;white-space:nowrap}
 .filters>summary::before{content:"";width:15px;height:13px;background:linear-gradient(#263234,#263234) 0 3px/100% 1px no-repeat,linear-gradient(#263234,#263234) 0 9px/100% 1px no-repeat,linear-gradient(#263234,#263234) 3px 1px/3px 5px no-repeat,linear-gradient(#263234,#263234) 9px 7px/3px 5px no-repeat}
 .filter-body{position:absolute;right:0;top:calc(100% + 8px);background:#fafcfd;z-index:4;border:1px solid #acb6b3;padding:18px;display:grid;gap:11px;width:min(290px,86vw);box-shadow:0 10px 32px #10192220}
 .filter-body label{display:grid;gap:3px;font-weight:600;font-size:.875rem}.filter-body input,.filter-body select{width:100%;padding:7px 8px;border:1px solid #a8b4b0;background:white;border-radius:2px;font-size:1rem}
@@ -123,28 +145,24 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 .stakes h2{font-size:clamp(2.3rem,4.3vw,4.7rem);line-height:1.01;letter-spacing:-.06em;margin-top:14px;font-weight:560}
 .stake-text{display:grid;gap:20px}.stake-text>div{border-left:2px solid #f5c6d0;padding-left:16px}.stake-text>div+div{border-color:var(--mint)}
 .stake-text h3{font-size:1.03rem;letter-spacing:-.02em;color:#f5c6d0}.stake-text>div+div h3{color:var(--mint)}.stake-text p{color:#d7d9d8;max-width:59ch;font-size:1rem;line-height:1.5;margin-top:4px}
-.chronology{display:grid;grid-template-columns:.74fr 1.26fr;gap:5%;padding-block:56px 64px}
-.events ol{list-style:none;padding:0}.event{border-top:1px solid var(--line)}.event a{position:relative;padding:13px 2px 13px 17px;text-decoration:none;display:grid;grid-template-columns:108px 1fr;align-items:baseline;gap:8px}.event a::before{content:"";position:absolute;left:1px;top:20px;width:5px;height:5px;border:1.5px solid #45748f;border-radius:50%}.event:first-child a::before{background:#45748f}.event a:hover b{text-decoration:underline;text-underline-offset:4px}.event time{font:.82rem/1.4 var(--mono);color:var(--secondary)}.event b{font-size:1rem;letter-spacing:-.025em;font-weight:620}
-.earlier>summary{margin:12px 0}.earlier>summary::after{content:"+"}.earlier[open]>summary::after{content:"−"}.earlier .when-open,.earlier[open] .when-closed{display:none}.earlier[open] .when-open{display:inline}
 .foot{display:flex;align-items:flex-start;justify-content:space-between;gap:40px;padding-block:23px 29px}.foot details{max-width:62ch;font-size:.9rem;color:#d3dae2}.foot summary{text-align:right}.foot details p{margin:12px 0 6px}.foot details a{color:var(--mint)}
 @media(min-width:1550px){.hero{padding-block:55px 45px}}
 @media(max-width:990px){.nav{gap:26px}.hero{gap:2%;grid-template-columns:1.08fr 1fr}.record>summary{grid-template-columns:1fr 14px;row-gap:7px}.record>summary .status{grid-column:1;grid-row:2;justify-self:start}.toggle{grid-column:2;grid-row:1/3}.stat+.stat{padding-left:18px}}
 @media(max-width:720px){.wrap{width:calc(100% - 36px)}.nav{min-height:57px;justify-content:space-between;gap:12px}.nav nav{gap:15px}.nav nav a{font-size:.85rem}.edition{display:none}.brand{font-size:1.1rem;gap:7px}.hero{grid-template-columns:1fr;padding:28px 0 18px}.hero-copy{z-index:1}.hero h1{font-size:clamp(3.1rem,10.9vw,5.15rem);margin:13px 0 15px}.lede{max-width:49ch;font-size:1rem}.proof-link{margin-top:13px}
-.plate{margin:4px 0 1px}.plate canvas#surface{height:clamp(155px,32vw,215px)}.plate figcaption{font-size:.74rem}
 .totals{gap:10px;padding:15px 0 19px}.stat{display:block}.score-strip{display:flex;margin-bottom:9px;gap:2px}.score-strip i{width:6px}.stat+.stat{padding-left:12px}.stat strong{font-size:2.55rem}.stat b{font-size:.95rem;line-height:1.15;margin-top:5px}.stat small{display:none}
-.catalogue{padding:32px 0 38px}.section-head{align-items:flex-start;margin-bottom:19px}.section-head h2,.chronology h2{font-size:2.1rem}.board{display:flex;flex-direction:column;gap:23px}.column{display:contents}.group{width:100%}.solved{order:1}.open{order:2}.human{order:3;margin:0}
-.record>summary{grid-template-columns:1fr auto 12px;gap:9px}.record>summary .status{grid-row:auto;grid-column:auto}.toggle{grid-column:auto;grid-row:auto}.record-name{font-size:1.05rem}.question{font-size:.92rem}.filters>summary{padding:6px 8px;font-size:.81rem}.stake-grid,.chronology{grid-template-columns:1fr;gap:24px;padding-block:33px}.timeline-intro br{display:none}.foot{gap:15px}.foot details[open]{max-width:62%}}
-@media(max-width:450px){.nav nav{gap:11px}.section-head{flex-wrap:wrap;align-items:flex-end;gap:12px}.filter-body{left:0;right:auto}.section-head .filters{margin-left:0}.section-head:has(.filters[open]){display:block}.section-head .filters[open]{margin-top:12px}.record>summary{grid-template-columns:1fr 14px;row-gap:6px}.record>summary .status{grid-column:1;grid-row:2}.toggle{grid-column:2;grid-row:1/3}.event a{grid-template-columns:93px 1fr}.foot{flex-wrap:wrap}.foot details[open]{max-width:100%}.foot details[open] summary{text-align:left}}
+.catalogue{padding:32px 0 38px}.section-head{align-items:flex-start;margin-bottom:19px}.section-head h2{font-size:2.1rem}.board{display:flex;flex-direction:column;gap:23px}.column{display:contents}.group{width:100%}.solved{order:1}.open{order:2}.human{order:3;margin:0}
+.record>summary{grid-template-columns:1fr auto 12px;gap:9px}.record>summary .status{grid-row:auto;grid-column:auto}.toggle{grid-column:auto;grid-row:auto}.record-name{font-size:1.05rem}.question{font-size:.92rem}.filters>summary{padding:6px 8px;font-size:.81rem}.stake-grid{grid-template-columns:1fr;gap:24px;padding-block:33px}.foot{gap:15px}.foot details[open]{max-width:62%}}
+@media(max-width:450px){.nav nav{gap:11px}.section-head{flex-wrap:wrap;align-items:flex-end;gap:12px}.filter-body{left:0;right:auto}.section-head .filters{margin-left:0}.section-head:has(.filters[open]){display:block}.section-head .filters[open]{margin-top:12px}.record>summary{grid-template-columns:1fr 14px;row-gap:6px}.record>summary .status{grid-column:1;grid-row:2}.toggle{grid-column:2;grid-row:1/3}.foot{flex-wrap:wrap}.foot details[open]{max-width:100%}.foot details[open] summary{text-align:left}}
 @media(max-width:350px){.wrap{width:calc(100% - 26px)}.nav{gap:5px}.nav nav{gap:7px}.nav nav a{font-size:.79rem}.brand{font-size:1rem}.hero h1{font-size:2.85rem}}
-@media(max-width:720px){.plot-head{padding:8px 11px;font-size:.74rem}.plate{margin-top:18px}}
 @media(max-width:720px){
   .night>.wrap{display:grid}.night .hero{display:contents}.hero-copy{grid-row:1;padding:28px 0 19px}
-  .totals{grid-row:2;border-bottom:1px solid #3c4143}.night .plate{grid-row:3;margin:17px 0 21px}
+  .night .proof-history{grid-row:2;margin:0 0 20px;padding:16px 14px 4px}.totals{grid-row:3}.milestone a{grid-template-columns:52px 13px minmax(0,1fr);gap:6px}.history-header h2{font-size:1.45rem}
 }
-@media(max-width:720px){.brand img{width:32px;height:32px}.brand-type{gap:3px}.owner{font-size:.61rem}.publication{font-size:.96rem}.nav{min-height:62px}.nav nav a{font-size:.8rem}.plate figcaption{font-size:.69rem;padding:9px 12px}.hero{gap:0}}
-@media(max-width:380px){.nav nav{gap:9px}.nav nav a{font-size:.74rem}.publication{font-size:.85rem}.brand img{width:29px;height:29px}.plot-title b{font-size:1.03rem}.plot-title{gap:6px}.plot-switch button{padding:5px}.stat .denominator{font-size:.62rem}.stat b{font-size:.84rem}}
+@media(max-width:720px){.brand img{width:32px;height:32px}.brand-type{gap:3px}.owner{font-size:.61rem}.publication{font-size:.96rem}.nav{min-height:62px}.nav nav a{font-size:.8rem}.hero{gap:0}}
+@media(max-width:380px){.nav nav{gap:9px}.nav nav a{font-size:.74rem}.publication{font-size:.85rem}.brand img{width:29px;height:29px}.stat .denominator{font-size:.62rem}.stat b{font-size:.84rem}}
 @media(max-width:350px){.nav{flex-wrap:wrap;justify-content:flex-start;gap:8px 20px;padding-block:10px}.nav nav{gap:14px}.nav nav a{padding-block:3px}}
-@media print{.filters,.proof-link,.nav nav,footer,.skip{display:none}.night,.mast,.stakes{background:white;color:black}.hero h1 em,.stat b,.stat small,.lede,.stake-text p{color:#222}.catalogue,.chronology{padding-block:20px}}
+@media(max-width:360px){.history-filter label>span{font-size:.82rem;gap:4px;padding:5px 7px}.night .proof-history{padding-inline:11px}.milestone a{gap:4px;grid-template-columns:50px 13px minmax(0,1fr)}}
+@media print{.filters,.proof-link,.nav nav,footer,.skip{display:none}.night,.mast,.stakes{background:white;color:black}.hero h1 em,.stat b,.stat small,.lede,.stake-text p{color:#222}.catalogue{padding-block:20px}}
 </style>
 </head>
 <body id="top">
@@ -163,14 +181,25 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
           <div class="hero-copy">
             <p class="kicker"><span class="rule"></span> AI &amp; mathematics</p>
             <h1 id="hero-title">What has AI<br><em>already solved?</em></h1>
-            <p class="lede">A prediction about prime numbers stood unproved for 167 years. On 20 November 2026, Levent Alpöge released a proof of the Riemann hypothesis developed with Claude. Independent teams checked the formal proof.</p>
+            <p class="lede">A prediction about prime numbers stood unproved for 167 years. In November 2026, independent teams checked the proof Levent Alpöge developed with Claude.</p>
             <a class="proof-link" href="#problem/riemann">Read the Riemann result <span aria-hidden="true">↗</span></a>
           </div>
-          <figure class="plate">
-            <div class="plot-head"><span class="plot-title"><b aria-hidden="true">ζ(s)</b> Riemann’s zeta function</span><div class="plot-switch" aria-label="Plot view"><button type="button" data-plot="surface" aria-pressed="true">Surface</button><button type="button" data-plot="trace" aria-pressed="false">Trace</button></div></div>
-            <canvas id="surface" role="img" aria-label="An inverse-height plot of Riemann’s zeta function. Peaks mark its first three nontrivial zeros."></canvas>
-            <figcaption><span class="plot-key"></span><span id="plot-caption">Each peak marks a place where the function reaches zero.</span></figcaption>
-          </figure>
+          <section class="proof-history" id="timeline" aria-labelledby="timeline-title">
+            <div class="history-header"><h2 id="timeline-title">Proof timeline</h2><span>Latest first</span></div>
+            <fieldset class="history-filter">
+              <legend class="visually-hidden">Milestones to show</legend>
+              <label><input type="radio" name="milestones" value="resolutions" checked><span>AI resolutions <b>3</b></span></label>
+              <label><input type="radio" name="milestones" value="all"><span>All milestones <b>8</b></span></label>
+            </fieldset>
+            <ol class="milestones" aria-label="Dated milestones"><li class="milestone resolution"><a href="#problem/riemann"><time datetime="2026-11-21">21 Nov<small>2026</small></time><span class="rail" aria-hidden="true"></span><span class="milestone-copy"><b>Riemann hypothesis</b><span>Independent teams check the proof developed with Claude.</span></span></a></li>
+<li class="milestone"><a href="#problem/riemann"><time datetime="2026-11-20">20 Nov<small>2026</small></time><span class="rail" aria-hidden="true"></span><span class="milestone-copy"><b>Riemann hypothesis</b><span>Levent Alpöge releases the formal proof.</span></span></a></li>
+<li class="milestone"><a href="#problem/navier-stokes"><time datetime="2026-11-20">20 Nov<small>2026</small></time><span class="rail" aria-hidden="true"></span><span class="milestone-copy"><b>Navier–Stokes</b><span>A second claim covers fluid flow without an external force. Review continues.</span></span></a></li>
+<li class="milestone"><a href="#problem/yang-mills"><time datetime="2026-11-10">10 Nov<small>2026</small></time><span class="rail" aria-hidden="true"></span><span class="milestone-copy"><b>Yang–Mills &amp; the mass gap</b><span>A working group checks the construction. The mass gap stays open.</span></span></a></li>
+<li class="milestone"><a href="#problem/navier-stokes"><time datetime="2026-09-08">8 Sep<small>2026</small></time><span class="rail" aria-hidden="true"></span><span class="milestone-copy"><b>Navier–Stokes</b><span>OpenAI proposes a fluid singularity. Researchers later challenge the argument.</span></span></a></li>
+<li class="milestone resolution"><a href="#problem/cycle-cover"><time datetime="2026-07">Jul<small>2026</small></time><span class="rail" aria-hidden="true"></span><span class="milestone-copy"><b>Cycle double cover</b><span>Graph theorists publish independent accounts of the AI’s proof.</span></span></a></li>
+<li class="milestone resolution"><a href="#problem/unit-distance"><time datetime="2026-05-20">20 May<small>2026</small></time><span class="rail" aria-hidden="true"></span><span class="milestone-copy"><b>Erdős unit distance</b><span>An AI finds a counterexample to Erdős’s conjecture.</span></span></a></li>
+<li class="milestone"><a href="#problem/poincare"><time datetime="2010">2010</time><span class="rail" aria-hidden="true"></span><span class="milestone-copy"><b>Poincaré conjecture</b><span>Clay awards the Millennium Prize for Perelman’s proof.</span></span></a></li></ol>
+          </section>
         </section>
         <section class="totals" aria-label="Outcomes for the nine problems tracked here">
           <a class="stat won" href="#solved"><span class="score-strip" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></span><strong>3 <span class="denominator">of 9</span></strong><span><b>Settled with AI</b><small class="breakdown"><span>2 proofs</span> · <span>1 disproof</span></small></span></a>
@@ -253,16 +282,6 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
         </div>
       </div>
     </section>
-    <section id="timeline" class="wrap chronology" aria-labelledby="timeline-title">
-      <div class="timeline-intro"><p class="overline">Timeline</p><h2 id="timeline-title">When the <br>evidence changed.</h2></div>
-      <div class="events"><ol><li class="event"><a href="#problem/riemann"><time datetime="2026-11-21">21 Nov 2026</time><b>Riemann proof independently verified</b></a></li>
-<li class="event"><a href="#problem/riemann"><time datetime="2026-11-20">20 Nov 2026</time><b>A proof of the Riemann hypothesis is released</b></a></li>
-<li class="event"><a href="#problem/navier-stokes"><time datetime="2026-11-20">20 Nov 2026</time><b>A second Navier–Stokes claim</b></a></li></ol><details class="earlier"><summary><span class="when-closed">Show earlier milestones</span><span class="when-open">Hide earlier milestones</span></summary><ol><li class="event"><a href="#problem/yang-mills"><time datetime="2026-11-10">10 Nov 2026</time><b>Yang–Mills construction assessed</b></a></li>
-<li class="event"><a href="#problem/navier-stokes"><time datetime="2026-09-08">08 Sep 2026</time><b>A proposed fluid singularity</b></a></li>
-<li class="event"><a href="#problem/cycle-cover"><time datetime="2026-07">Jul 2026</time><b>A proof for cycle double covers</b></a></li>
-<li class="event"><a href="#problem/unit-distance"><time datetime="2026-05-20">20 May 2026</time><b>A geometry conjecture overturned</b></a></li>
-<li class="event"><a href="#problem/poincare"><time datetime="2010">2010</time><b>The first Millennium Prize</b></a></li></ol></details></div>
-    </section>
   </main>
   <footer><div class="wrap foot"><a class="brand" href="#top"><img src="./clarity-mark.png" width="38" height="38" alt=""><span class="brand-type"><span class="owner">Blue Clarity</span><span class="publication">The Proof Tracker</span></span></a><details id="methodology"><summary>How we count</summary><p>We track the seven Millennium Prize Problems and two other conjectures. A checked proof or counterexample counts as a resolution. Claims under review and partial results stay open. Each entry links to its evidence. Clay awards prizes through a separate review.</p><a href="https://www.claymath.org/millennium-problems/rules/">Clay’s prize rules</a></details></div></footer>
   <script>"use strict";
@@ -322,102 +341,6 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
   }
   window.addEventListener("hashchange", followLink);
   if (location.hash) requestAnimationFrame(followLink);
-})();
-
-(() => {
-  const canvas = document.getElementById("surface");
-  const ctx = canvas.getContext("2d");
-  if (!ctx) return;
-  const zeros = [14.1347251417, 21.0220396388, 25.0108575801];
-  const low = 9.6, high = 29.2, realLow = -0.85, realHigh = 1.85;
-  const cols = 144, rows = 52;
-  const log = Array.from({length:49}, (_, n) => Math.log(n || 1));
-
-  // Euler–Maclaurin summation of zeta(s + it), with a B2 tail correction.
-  function magnitude(s, t) {
-    let a = 0, b = 0;
-    for (let n = 1; n < 48; n++) {
-      const modulus = Math.exp(-s * log[n]), angle = t * log[n];
-      a += modulus * Math.cos(angle);
-      b -= modulus * Math.sin(angle);
-    }
-    const n = 48, modulus = Math.exp(-s * log[n]), angle = t * log[n];
-    const x = modulus * Math.cos(angle), y = -modulus * Math.sin(angle), d = (s-1)**2 + t*t;
-    a += n*(x*(s-1)+y*t)/d + x/2 + (s*x-t*y)/(12*n);
-    b += n*(y*(s-1)-x*t)/d + y/2 + (s*y+t*x)/(12*n);
-    return Math.hypot(a, b);
-  }
-  const mesh = Array.from({length:rows+1}, (_, j) => Array.from({length:cols+1}, (_, i) => {
-    const m = magnitude(realLow+(realHigh-realLow)*j/rows, low+(high-low)*i/cols);
-    return 1/(1+m*m);
-  }));
-  const trace = Array.from({length:501}, (_, i) => magnitude(0.5, low+(high-low)*i/500));
-  let mode = "surface";
-  function line(points, colour, width) {
-    ctx.beginPath();
-    points.forEach(([x,y], i) => { if (i) ctx.lineTo(x,y); else ctx.moveTo(x,y); });
-    ctx.strokeStyle = colour; ctx.lineWidth = width; ctx.stroke();
-  }
-  function text(label, x, y, align = "left") {
-    ctx.fillStyle = "#c0ddea"; ctx.font = "11px Consolas, monospace"; ctx.textAlign = align;
-    ctx.fillText(label, x, y);
-  }
-  function point(x, y) {
-    ctx.beginPath(); ctx.arc(x,y,4,0,Math.PI*2);
-    ctx.fillStyle = "#efffff"; ctx.fill();
-    ctx.beginPath(); ctx.arc(x,y,7,0,Math.PI*2);
-    ctx.strokeStyle = "#b5eeffbd"; ctx.lineWidth = 1; ctx.stroke();
-  }
-  function draw() {
-    const w = canvas.clientWidth, h = canvas.clientHeight;
-    if (!w || !h) return;
-    const ratio = Math.min(window.devicePixelRatio || 1, 2);
-    canvas.width = Math.round(w*ratio); canvas.height = Math.round(h*ratio);
-    ctx.setTransform(ratio,0,0,ratio,0,0);
-    if (mode === "trace") {
-      const pad = 28;
-      const X = u => pad+(w-2*pad)*u;
-      const Y = value => h-22-(h-43)*value/3.55;
-      for (let v=0; v<=3; v++) { line([[pad,Y(v)],[w-pad,Y(v)]],"#344d70",0.7); text(String(v),pad-8,Y(v)+3,"right"); }
-      for (let t=10; t<=28; t+=3) { const x=X((t-low)/(high-low)); text(String(t),x,h-6,"center"); }
-      line(trace.map((v,i) => [X(i/500),Y(v)]),"#a8e2fc",2);
-      zeros.forEach(v => point(X((v-low)/(high-low)),Y(0)));
-      text("|ζ(½ + it)|",pad,14); text("t",w-pad+13,h-6);
-      return;
-    }
-    const project = (u,v,z) => [w*(.025+.725*u+.22*v), h*(.78+.16*u-.29*v-.58*z)];
-    for(let i=0;i<=16;i++) line([project(i/16,0,0),project(i/16,1,0)],"#6791bc68",.7);
-    for(let j=0;j<=9;j++) line([project(0,j/9,0),project(1,j/9,0)],"#6791bc68",.7);
-    // Back-to-front strips hide the far side of each peak.
-    for(let j=rows;j>0;j--) {
-      const far = mesh[j].map((z,i)=>project(i/cols,j/rows,z));
-      const near = mesh[j-1].map((z,i)=>project(i/cols,(j-1)/rows,z));
-      ctx.beginPath(); far.forEach(([x,y],i)=>{if(i) ctx.lineTo(x,y); else ctx.moveTo(x,y);});
-      for(let i=cols;i>=0;i--) ctx.lineTo(...near[i]);
-      ctx.closePath(); ctx.fillStyle="#102b50"; ctx.fill();
-      for(let i=0;i<=cols;i+=2) {
-        const z=mesh[j][i];
-        line([far[i],near[i]],"rgba(154,218,248,"+(.24+.58*z)+")",.82);
-      }
-      if(j%2===0) line(near,"rgba(181,232,255,"+(.51+.2*(1-j/rows))+")",1);
-    }
-    zeros.forEach((zero,i)=>{
-      const [x,y]=project((zero-low)/(high-low),(.5-realLow)/(realHigh-realLow),1);
-      point(x,y); if(h>170) text(zero.toFixed(2),x+10,y-6);
-    });
-    if(h>170) {const [x,y]=project(.56,0,0);text("Im(s)",x,y+19);const [a,b]=project(1,.68,0);text("Re(s)",a,b+17,"center");}
-  }
-  document.querySelectorAll("[data-plot]").forEach(button => button.addEventListener("click", () => {
-    mode = button.dataset.plot;
-    document.querySelectorAll("[data-plot]").forEach(b => b.setAttribute("aria-pressed",String(b === button)));
-    const caption = mode === "surface" ? "Each peak marks a place where the function reaches zero." : "The curve touches zero at each marked point.";
-    document.getElementById("plot-caption").textContent = caption;
-    canvas.setAttribute("aria-label",mode === "surface" ? "Inverse-height plot. Peaks mark the first three nontrivial zeros of Riemann’s zeta function." : "Magnitude along the critical line. The first three zeros fall at heights 14.13, 21.02 and 25.01.");
-    draw();
-  }));
-  if ("ResizeObserver" in window) new ResizeObserver(draw).observe(canvas);
-  else window.addEventListener("resize",draw);
-  draw();
 })();
 </script>
 </body>
