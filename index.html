@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://blueclarityone.github.io/math-timeline/">
   <meta property="og:title" content="What has AI already solved? | Blue Clarity">
   <meta property="og:description" content="Nine famous maths problems. Two proofs and one disproof with AI. Explore what’s still open and what’s at stake.">
-  <meta property="og:image" content="https://blueclarityone.github.io/math-timeline/proof-tracker-share.png?v=timeline-1">
+  <meta property="og:image" content="https://blueclarityone.github.io/math-timeline/proof-tracker-share.png?v=horizontal-1">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="What has AI already solved? | Blue Clarity">
   <meta name="twitter:description" content="Nine famous maths problems. Two proofs and one disproof with AI. Explore what’s still open and what’s at stake.">
-  <meta name="twitter:image" content="https://blueclarityone.github.io/math-timeline/proof-tracker-share.png?v=timeline-1">
+  <meta name="twitter:image" content="https://blueclarityone.github.io/math-timeline/proof-tracker-share.png?v=horizontal-1">
   <meta name="twitter:image:alt" content="The Proof Tracker by Blue Clarity. What has AI already solved? Nine maths problems, two proofs, one disproof. A timeline marks the Erdős, cycle double cover and Riemann results in 2026.">
   <link rel="icon" type="image/png" sizes="160x160" href="./clarity-mark.png">
   <link rel="preload" href="./assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -46,42 +46,55 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 .brand img{display:block;width:38px;height:38px;flex:none}.brand-type{display:grid;gap:2px;line-height:1}.owner{font:650 .68rem/1.08 var(--sans);letter-spacing:.028em;color:var(--blue)}.publication{font-weight:650;letter-spacing:-.048em}
 .nav nav{display:flex;gap:26px}.nav nav a,.edition,.stat small{color:#c1ccd6}.nav nav a{white-space:nowrap;font-weight:500;font-size:.85rem;text-decoration:none}.nav nav a:hover,.proof-link:hover,.foot summary:hover{text-decoration:underline;text-underline-offset:4px}
 .edition{margin-left:auto;font: .8rem var(--mono)}.edition time{color:#ecece5}
-.hero{display:grid;grid-template-columns:1.08fr 1fr;gap:4%;align-items:center;padding:52px 0 43px}
+.hero{padding:34px 0 21px}
+.hero-copy{display:grid;grid-template-columns:1.2fr .8fr;column-gap:6%;align-items:center;margin-bottom:25px}
+.hero-copy .kicker{grid-column:1/-1}.hero-intro{align-self:center}
 .kicker,.overline{display:flex;align-items:center;gap:11px;font:700 .76rem/1.2 var(--mono);letter-spacing:.13em;text-transform:uppercase}
 .kicker{color:var(--blue)}.rule{width:24px;height:1px;background:currentColor;position:relative}.rule::after{content:'';position:absolute;right:0;top:-2px;width:5px;height:5px;background:currentColor;border-radius:50%}
-.hero h1{font-size:clamp(3.15rem,5.65vw,5.8rem);line-height:.99;letter-spacing:-.076em;margin:21px 0 23px;font-weight:620}
+.hero h1{font-size:clamp(3.15rem,5.65vw,5.8rem);line-height:.99;letter-spacing:-.076em;margin:14px 0 0;font-weight:620}
 .hero h1 em,.stakes h2 em{color:var(--blue);font-style:normal;font-weight:480;letter-spacing:-.078em}
 .lede{max-width:46ch;font-size:clamp(1rem,1.35vw,1.2rem);line-height:1.52;color:#c5cdd6}
 .proof-link{display:inline-flex;gap:10px;align-items:center;margin-top:18px;padding-bottom:3px;border-bottom:1px solid #517c8f;text-decoration:none;font-weight:600;font-size:.95rem;color:#eaf8ff}.proof-link span{color:var(--blue)}
 .visually-hidden,.history-filter input{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-.proof-history{min-width:0;align-self:start;scroll-margin-top:16px;padding:20px 23px 5px;border:1px solid #364c60;border-radius:4px;background:linear-gradient(145deg,#142638,#0c1621 75%);color:#f1f6fa}
-.history-header{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.history-header h2{font-size:clamp(1.35rem,2.1vw,1.85rem);line-height:1.1;letter-spacing:-.055em;font-weight:600}
-.history-header>span{color:#adbfce;font:.76rem/1.25 var(--mono)}
-.history-filter{display:inline-flex;max-width:100%;padding:3px;margin:13px 0 5px;gap:2px;min-width:0;border:1px solid #395064;border-radius:4px;background:#08131e}
-.history-filter label{cursor:pointer;position:relative}
-.history-filter label>span{display:flex;align-items:center;gap:7px;padding:5px 9px;border-radius:2px;color:#bfd0dd;font:550 .875rem/1.28 var(--sans)}
-.history-filter b{font:500 .78rem/1 var(--mono);opacity:.85}
-.history-filter input:checked+span{background:var(--blue);color:#102431}
+.proof-history{min-width:0;scroll-margin-top:16px;color:#f1f6fa;border-top:1px solid #395066;border-bottom:1px solid #35495a;background:linear-gradient(110deg,#132232,#0c1722 78%)}
+.history-header{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:16px 20px 0}
+.history-header h2{margin-right:auto;font-size:clamp(1.25rem,2vw,1.65rem);line-height:1.1;letter-spacing:-.05em;font-weight:600}
+.history-filter{display:flex;max-width:100%;min-width:0;gap:2px;margin:0;padding:2px;border:1px solid #395064;border-radius:4px;background:#09141e}
+.history-filter label{position:relative;cursor:pointer}.history-filter label>span{display:flex;align-items:center;gap:6px;border-radius:2px;padding:5px 9px;color:#bfceda;font:550 .82rem/1.3 var(--sans)}
+.history-filter b{font:500 .75rem var(--mono)}.history-filter input:checked+span{background:var(--blue);color:#102431}
 .history-filter input:focus-visible+span{outline:2px solid white;outline-offset:2px}
-.history-filter label:hover span{text-decoration:underline;text-underline-offset:3px}
-.milestones{list-style:none;padding:0;margin:0}
-.milestone a{display:grid;grid-template-columns:58px 17px minmax(0,1fr);gap:8px;align-items:stretch;min-height:63px;color:inherit;text-decoration:none}
-.milestone time{display:block;padding-top:16px;color:#b8d7e8;font:550 .88rem/1.2 var(--mono);white-space:nowrap}
-.milestone time small{display:block;color:#aabac9;font-size:.72rem;margin-top:3px}
-.rail{position:relative;display:block}
-.rail::before{content:"";position:absolute;top:0;bottom:0;left:7px;width:1px;background:#476074}
-.rail::after{content:"";position:absolute;top:20px;left:4px;width:5px;height:5px;background:#142638;border:1px solid #91b0c4;border-radius:50%}
-.resolution .rail::after{background:var(--mint);border-color:var(--mint)}
-.milestone:first-child .rail::before{top:23px}
-.milestone:last-child .rail::before,.proof-history:has(input[value="resolutions"]:checked) .resolution:not(:has(~.resolution)) .rail::before{bottom:auto;height:23px}
-.milestone-copy{display:block;border-bottom:1px solid #293e4f;padding:12px 0 11px}
-.milestone:last-child .milestone-copy,.proof-history:has(input[value="resolutions"]:checked) .resolution:not(:has(~.resolution)) .milestone-copy{border-bottom-color:transparent}
-.milestone-copy b{display:block;font-size:1.03rem;line-height:1.32;font-weight:600;letter-spacing:-.03em}
-.milestone-copy>span{display:block;margin-top:3px;color:#bbcad5;font-size:.875rem;line-height:1.4}
-.milestone a:hover b,.milestone a:focus-visible b{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+.timeline-arrows{display:flex;gap:4px}.timeline-arrows[hidden]{display:none}.timeline-arrows button{width:34px;height:32px;display:grid;place-content:center;padding:0 0 3px;font:1.4rem/1 var(--sans);border:1px solid #597186;border-radius:3px;background:#102332;color:#eeffff;cursor:pointer}.timeline-arrows button:disabled{opacity:.35;cursor:default}
+.time-window{width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#506e84 #101d28}
+.time-window:focus-visible{outline:2px solid var(--blue);outline-offset:-3px}
+.time-chart{--axis-y:106px;position:relative;min-width:710px;height:220px;margin:0 16px}
+.axis{position:absolute;left:1%;right:1%;top:var(--axis-y);height:2px;background:linear-gradient(90deg,#507f97,#a8d8ea)}
+.axis::after{content:"";position:absolute;right:-1px;top:-3px;width:7px;height:7px;border-top:2px solid #a8d8ea;border-right:2px solid #a8d8ea;transform:rotate(45deg)}
+.calendar-ticks{position:absolute;inset:0;pointer-events:none}
+.calendar-ticks span{position:absolute;left:var(--at);top:calc(var(--axis-y) - 4px);bottom:4px;padding-top:88px;color:#adc0ce;font:.71rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.calendar-ticks span::before{content:"";position:absolute;left:0;top:0;height:9px;width:1px;background:#8aa9bc}
+.calendar-ticks span::after{content:"";position:absolute;left:0;bottom:24px;width:1px;height:5px;background:#456073}
+.milestones{list-style:none;margin:0;padding:0}
+.milestone{position:absolute;top:calc(var(--axis-y) + 1px);left:var(--featured-x);--stem:18px;--label-bottom:var(--stem);--label-top:auto;--stem-top:auto;--stem-bottom:0;--anchor:auto;--start:0;--align:left}
+.milestone a{position:relative;display:block;color:inherit;text-decoration:none}
+.pin{position:absolute;width:12px;height:12px;left:-6px;top:-6px;background:#142331;border:2px solid #a8d8ea;border-radius:50%;z-index:1}
+.resolution .pin{background:var(--mint);border-color:#0e1b27;box-shadow:0 0 0 1px var(--mint)}
+.milestone a::before{content:"";position:absolute;left:0;top:var(--stem-top);bottom:var(--stem-bottom);height:calc(var(--stem) - 3px);width:1px;background:#7197a9}
+.pin-label{display:block;position:absolute;left:var(--start);right:var(--anchor);text-align:var(--align);bottom:var(--label-bottom);top:var(--label-top);width:max-content;max-width:234px}
+.pin-label time{display:block;color:var(--blue);font:.76rem/1.3 var(--mono);letter-spacing:.04em;text-transform:uppercase}
+.pin-label b{display:block;font-size:clamp(1rem,1.45vw,1.25rem);line-height:1.18;font-weight:620;letter-spacing:-.035em;margin:3px 0}
+.event-note{display:block;color:#bdcbd5;font-size:.8rem;line-height:1.35}
+.milestone a:hover b,.milestone a:focus-visible b{text-decoration:underline;text-underline-offset:3px;color:var(--blue)}
+.milestone a:focus-visible{outline:0}.milestone a:focus-visible .pin-label{outline:2px solid var(--blue);outline-offset:4px}
 .proof-history:has(input[value="resolutions"]:checked) .milestone:not(.resolution){display:none}
-@media(min-width:721px){.hero:has(input[value="all"]:checked){align-items:start}}
+.proof-history:has(input[value="resolutions"]:checked) .featured-below,.proof-history:has(input[value="all"]:checked) .all-below{--label-bottom:auto;--label-top:var(--stem);--stem-top:0;--stem-bottom:auto}
+.proof-history:has(input[value="resolutions"]:checked) .featured-end,.proof-history:has(input[value="all"]:checked) .all-end{--anchor:0;--start:auto;--align:right}
+.proof-history:has(input[value="all"]:checked) .time-chart{min-width:1600px;height:205px}
+.proof-history:has(input[value="all"]:checked) .milestone{left:var(--event-x)}
+.proof-history:has(input[value="all"]:checked) .calendar-ticks{display:none}
+.proof-history:has(input[value="all"]:checked) .milestone:first-child::after{content:"";position:absolute;left:100px;top:-5px;width:9px;height:11px;background:#11202d;border-inline:1px solid #94b2c5;transform:skewX(-25deg)}
+@media(max-width:720px){.hero-copy{display:block;margin:0}.history-header{gap:10px;padding:13px 12px 0}.history-header h2{font-size:1.25rem}.timeline-arrows{margin-left:auto}.time-chart{margin-inline:9px}.pin-label b{font-size:1.05rem}}
+@media(max-width:600px){.history-header{display:grid;grid-template-columns:1fr auto}.history-header h2{grid-row:1;grid-column:1}.history-filter{grid-row:2;grid-column:1/-1;justify-self:start}.timeline-arrows{grid-row:1;grid-column:2}.hero-intro .lede{max-width:48ch}}
+
 .totals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #3b4854;padding:23px 0 27px;gap:18px}
 .stat{display:flex;flex-wrap:wrap;align-items:center;gap:8px clamp(10px,1.4vw,23px);text-decoration:none;position:relative;min-width:0}
 .stat+.stat{border-left:1px solid #303d49;padding-left:clamp(16px,3vw,53px)}
@@ -146,8 +159,8 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 .stake-text{display:grid;gap:20px}.stake-text>div{border-left:2px solid #f5c6d0;padding-left:16px}.stake-text>div+div{border-color:var(--mint)}
 .stake-text h3{font-size:1.03rem;letter-spacing:-.02em;color:#f5c6d0}.stake-text>div+div h3{color:var(--mint)}.stake-text p{color:#d7d9d8;max-width:59ch;font-size:1rem;line-height:1.5;margin-top:4px}
 .foot{display:flex;align-items:flex-start;justify-content:space-between;gap:40px;padding-block:23px 29px}.foot details{max-width:62ch;font-size:.9rem;color:#d3dae2}.foot summary{text-align:right}.foot details p{margin:12px 0 6px}.foot details a{color:var(--mint)}
-@media(min-width:1550px){.hero{padding-block:55px 45px}}
-@media(max-width:990px){.nav{gap:26px}.hero{gap:2%;grid-template-columns:1.08fr 1fr}.record>summary{grid-template-columns:1fr 14px;row-gap:7px}.record>summary .status{grid-column:1;grid-row:2;justify-self:start}.toggle{grid-column:2;grid-row:1/3}.stat+.stat{padding-left:18px}}
+@media(min-width:1550px){.hero{padding-block:40px 24px}}
+@media(max-width:990px){.nav{gap:26px}.record>summary{grid-template-columns:1fr 14px;row-gap:7px}.record>summary .status{grid-column:1;grid-row:2;justify-self:start}.toggle{grid-column:2;grid-row:1/3}.stat+.stat{padding-left:18px}}
 @media(max-width:720px){.wrap{width:calc(100% - 36px)}.nav{min-height:57px;justify-content:space-between;gap:12px}.nav nav{gap:15px}.nav nav a{font-size:.85rem}.edition{display:none}.brand{font-size:1.1rem;gap:7px}.hero{grid-template-columns:1fr;padding:28px 0 18px}.hero-copy{z-index:1}.hero h1{font-size:clamp(3.1rem,10.9vw,5.15rem);margin:13px 0 15px}.lede{max-width:49ch;font-size:1rem}.proof-link{margin-top:13px}
 .totals{gap:10px;padding:15px 0 19px}.stat{display:block}.score-strip{display:flex;margin-bottom:9px;gap:2px}.score-strip i{width:6px}.stat+.stat{padding-left:12px}.stat strong{font-size:2.55rem}.stat b{font-size:.95rem;line-height:1.15;margin-top:5px}.stat small{display:none}
 .catalogue{padding:32px 0 38px}.section-head{align-items:flex-start;margin-bottom:19px}.section-head h2{font-size:2.1rem}.board{display:flex;flex-direction:column;gap:23px}.column{display:contents}.group{width:100%}.solved{order:1}.open{order:2}.human{order:3;margin:0}
@@ -155,13 +168,13 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 @media(max-width:450px){.nav nav{gap:11px}.section-head{flex-wrap:wrap;align-items:flex-end;gap:12px}.filter-body{left:0;right:auto}.section-head .filters{margin-left:0}.section-head:has(.filters[open]){display:block}.section-head .filters[open]{margin-top:12px}.record>summary{grid-template-columns:1fr 14px;row-gap:6px}.record>summary .status{grid-column:1;grid-row:2}.toggle{grid-column:2;grid-row:1/3}.foot{flex-wrap:wrap}.foot details[open]{max-width:100%}.foot details[open] summary{text-align:left}}
 @media(max-width:350px){.wrap{width:calc(100% - 26px)}.nav{gap:5px}.nav nav{gap:7px}.nav nav a{font-size:.79rem}.brand{font-size:1rem}.hero h1{font-size:2.85rem}}
 @media(max-width:720px){
-  .night>.wrap{display:grid}.night .hero{display:contents}.hero-copy{grid-row:1;padding:28px 0 19px}
-  .night .proof-history{grid-row:2;margin:0 0 20px;padding:16px 14px 4px}.totals{grid-row:3}.milestone a{grid-template-columns:52px 13px minmax(0,1fr);gap:6px}.history-header h2{font-size:1.45rem}
+   .night>.wrap{display:grid;grid-template-columns:minmax(0,1fr)}.night .hero{display:contents}.hero-copy{grid-row:1;padding:28px 0 19px}
+  .night .proof-history{grid-row:2;margin:0 0 18px}.totals{grid-row:3}
 }
 @media(max-width:720px){.brand img{width:32px;height:32px}.brand-type{gap:3px}.owner{font-size:.61rem}.publication{font-size:.96rem}.nav{min-height:62px}.nav nav a{font-size:.8rem}.hero{gap:0}}
 @media(max-width:380px){.nav nav{gap:9px}.nav nav a{font-size:.74rem}.publication{font-size:.85rem}.brand img{width:29px;height:29px}.stat .denominator{font-size:.62rem}.stat b{font-size:.84rem}}
 @media(max-width:350px){.nav{flex-wrap:wrap;justify-content:flex-start;gap:8px 20px;padding-block:10px}.nav nav{gap:14px}.nav nav a{padding-block:3px}}
-@media(max-width:360px){.history-filter label>span{font-size:.82rem;gap:4px;padding:5px 7px}.night .proof-history{padding-inline:11px}.milestone a{gap:4px;grid-template-columns:50px 13px minmax(0,1fr)}}
+@media(max-width:360px){.history-filter label>span{font-size:.82rem;gap:4px;padding:5px 7px}}
 @media print{.filters,.proof-link,.nav nav,footer,.skip{display:none}.night,.mast,.stakes{background:white;color:black}.hero h1 em,.stat b,.stat small,.lede,.stake-text p{color:#222}.catalogue{padding-block:20px}}
 </style>
 </head>
@@ -181,24 +194,36 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
           <div class="hero-copy">
             <p class="kicker"><span class="rule"></span> AI &amp; mathematics</p>
             <h1 id="hero-title">What has AI<br><em>already solved?</em></h1>
-            <p class="lede">A prediction about prime numbers stood unproved for 167 years. In November 2026, independent teams checked the proof Levent Alpöge developed with Claude.</p>
-            <a class="proof-link" href="#problem/riemann">Read the Riemann result <span aria-hidden="true">↗</span></a>
+            <div class="hero-intro"><p class="lede">A prediction about prime numbers stood unproved for 167 years. In November 2026, independent teams checked the proof Levent Alpöge developed with Claude.</p>
+            <a class="proof-link" href="#problem/riemann">Read the Riemann result <span aria-hidden="true">↗</span></a></div>
           </div>
           <section class="proof-history" id="timeline" aria-labelledby="timeline-title">
-            <div class="history-header"><h2 id="timeline-title">Proof timeline</h2><span>Latest first</span></div>
-            <fieldset class="history-filter">
-              <legend class="visually-hidden">Milestones to show</legend>
-              <label><input type="radio" name="milestones" value="resolutions" checked><span>AI resolutions <b>3</b></span></label>
-              <label><input type="radio" name="milestones" value="all"><span>All milestones <b>8</b></span></label>
-            </fieldset>
-            <ol class="milestones" aria-label="Dated milestones"><li class="milestone resolution"><a href="#problem/riemann"><time datetime="2026-11-21">21 Nov<small>2026</small></time><span class="rail" aria-hidden="true"></span><span class="milestone-copy"><b>Riemann hypothesis</b><span>Independent teams check the proof developed with Claude.</span></span></a></li>
-<li class="milestone"><a href="#problem/riemann"><time datetime="2026-11-20">20 Nov<small>2026</small></time><span class="rail" aria-hidden="true"></span><span class="milestone-copy"><b>Riemann hypothesis</b><span>Levent Alpöge releases the formal proof.</span></span></a></li>
-<li class="milestone"><a href="#problem/navier-stokes"><time datetime="2026-11-20">20 Nov<small>2026</small></time><span class="rail" aria-hidden="true"></span><span class="milestone-copy"><b>Navier–Stokes</b><span>A second claim covers fluid flow without an external force. Review continues.</span></span></a></li>
-<li class="milestone"><a href="#problem/yang-mills"><time datetime="2026-11-10">10 Nov<small>2026</small></time><span class="rail" aria-hidden="true"></span><span class="milestone-copy"><b>Yang–Mills &amp; the mass gap</b><span>A working group checks the construction. The mass gap stays open.</span></span></a></li>
-<li class="milestone"><a href="#problem/navier-stokes"><time datetime="2026-09-08">8 Sep<small>2026</small></time><span class="rail" aria-hidden="true"></span><span class="milestone-copy"><b>Navier–Stokes</b><span>OpenAI proposes a fluid singularity. Researchers later challenge the argument.</span></span></a></li>
-<li class="milestone resolution"><a href="#problem/cycle-cover"><time datetime="2026-07">Jul<small>2026</small></time><span class="rail" aria-hidden="true"></span><span class="milestone-copy"><b>Cycle double cover</b><span>Graph theorists publish independent accounts of the AI’s proof.</span></span></a></li>
-<li class="milestone resolution"><a href="#problem/unit-distance"><time datetime="2026-05-20">20 May<small>2026</small></time><span class="rail" aria-hidden="true"></span><span class="milestone-copy"><b>Erdős unit distance</b><span>An AI finds a counterexample to Erdős’s conjecture.</span></span></a></li>
-<li class="milestone"><a href="#problem/poincare"><time datetime="2010">2010</time><span class="rail" aria-hidden="true"></span><span class="milestone-copy"><b>Poincaré conjecture</b><span>Clay awards the Millennium Prize for Perelman’s proof.</span></span></a></li></ol>
+            <div class="history-header">
+              <h2 id="timeline-title">Proof timeline</h2>
+              <fieldset class="history-filter">
+                <legend class="visually-hidden">Milestones to show</legend>
+                <label><input type="radio" name="milestones" value="resolutions" checked><span>AI resolutions <b>3</b></span></label>
+                <label><input type="radio" name="milestones" value="all"><span>All milestones <b>8</b></span></label>
+              </fieldset>
+              <div class="timeline-arrows" hidden>
+                <button type="button" data-pan="-1" aria-label="Earlier on the timeline" aria-controls="time-window">‹</button>
+                <button type="button" data-pan="1" aria-label="Later on the timeline" aria-controls="time-window">›</button>
+              </div>
+            </div>
+            <div id="time-window" class="time-window" role="region" aria-label="Scrollable chronological timeline" tabindex="0">
+              <div class="time-chart">
+                <div class="axis" aria-hidden="true"></div>
+                <div class="calendar-ticks" aria-hidden="true"><span style="--at:3.00%">May</span><span style="--at:16.62%">Jun</span><span style="--at:29.79%">Jul</span><span style="--at:43.41%">Aug</span><span style="--at:57.03%">Sept</span><span style="--at:70.21%">Oct</span><span style="--at:83.82%">Nov</span></div>
+                <ol class="milestones" aria-label="Milestones from earliest to latest"><li class="milestone all-above" style="--event-x:3.00%"><a href="#problem/poincare" title="Clay awards the Millennium Prize for Perelman’s proof."><span class="pin" aria-hidden="true"></span><span class="pin-label"><time datetime="2010">2010</time><b>Poincaré conjecture</b><span class="event-note">Millennium Prize awarded</span></span></a></li>
+<li class="milestone all-below resolution featured-above" style="--featured-x:11.35%;--event-x:16.43%"><a href="#problem/unit-distance" title="An AI finds a counterexample to Erdős’s conjecture."><span class="pin" aria-hidden="true"></span><span class="pin-label"><time datetime="2026-05-20">20 May 2026</time><b>Erdős unit distance</b><span class="event-note">AI counterexample found</span></span></a></li>
+<li class="milestone all-above resolution featured-below" style="--featured-x:29.79%;--event-x:29.86%"><a href="#problem/cycle-cover" title="Graph theorists publish independent accounts of the AI’s proof."><span class="pin" aria-hidden="true"></span><span class="pin-label"><time datetime="2026-07">Jul 2026</time><b>Cycle double cover</b><span class="event-note">Independent accounts published</span></span></a></li>
+<li class="milestone all-below" style="--event-x:43.29%"><a href="#problem/navier-stokes" title="OpenAI proposes a fluid singularity. Researchers later challenge the argument."><span class="pin" aria-hidden="true"></span><span class="pin-label"><time datetime="2026-09-08">8 Sept 2026</time><b>Navier–Stokes</b><span class="event-note">Singularity proposed</span></span></a></li>
+<li class="milestone all-above" style="--event-x:56.71%"><a href="#problem/yang-mills" title="A working group checks the construction. The mass gap stays open."><span class="pin" aria-hidden="true"></span><span class="pin-label"><time datetime="2026-11-10">10 Nov 2026</time><b>Yang–Mills &amp; the mass gap</b><span class="event-note">Partial result checked</span></span></a></li>
+<li class="milestone all-below" style="--event-x:70.14%"><a href="#problem/navier-stokes" title="A second claim covers fluid flow without an external force. Review continues."><span class="pin" aria-hidden="true"></span><span class="pin-label"><time datetime="2026-11-20">20 Nov 2026</time><b>Navier–Stokes</b><span class="event-note">Second claim under review</span></span></a></li>
+<li class="milestone all-above" style="--event-x:83.57%"><a href="#problem/riemann" title="Levent Alpöge releases the formal proof."><span class="pin" aria-hidden="true"></span><span class="pin-label"><time datetime="2026-11-20">20 Nov 2026</time><b>Riemann hypothesis</b><span class="event-note">Formal proof released</span></span></a></li>
+<li class="milestone all-below resolution featured-above featured-end all-end" style="--featured-x:92.61%;--event-x:97.00%"><a href="#problem/riemann" title="Independent teams check the proof developed with Claude."><span class="pin" aria-hidden="true"></span><span class="pin-label"><time datetime="2026-11-21">21 Nov 2026</time><b>Riemann hypothesis</b><span class="event-note">Proof independently checked</span></span></a></li></ol>
+              </div>
+            </div>
           </section>
         </section>
         <section class="totals" aria-label="Outcomes for the nine problems tracked here">
@@ -294,6 +319,29 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
   const collection = get("collection");
   const normalise = text => text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[‐‑–—-]/g, " ");
   const searchTerms = rows.map(row => normalise(row.textContent + " " + row.dataset.keywords));
+
+  const timeline = get("time-window");
+  const panControls = document.querySelector(".timeline-arrows");
+  const [earlier, later] = panControls.querySelectorAll("button");
+  function updateTimelineControls() {
+    const end = timeline.scrollWidth - timeline.clientWidth;
+    panControls.hidden = end < 2;
+    earlier.disabled = timeline.scrollLeft < 2;
+    later.disabled = timeline.scrollLeft >= end - 2;
+  }
+  panControls.addEventListener("click", event => {
+    const button = event.target.closest("button[data-pan]");
+    if (!button) return;
+    const step = timeline.clientWidth * .8 * Number(button.dataset.pan);
+    timeline.scrollBy({left:step,behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth"});
+  });
+  document.querySelector(".history-filter").addEventListener("change", () => {
+    timeline.scrollLeft = 0;
+    updateTimelineControls();
+  });
+  timeline.addEventListener("scroll",updateTimelineControls,{passive:true});
+  window.addEventListener("resize",updateTimelineControls);
+  updateTimelineControls();
 
   function applyFilters() {
     const term = normalise(search.value.trim());
