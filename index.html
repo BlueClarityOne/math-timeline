@@ -203,11 +203,11 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
   .record>summary {gap:18px;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 14px}
 }
 @media(max-width:720px) {
-  .hero-copy {display:flex;align-items:stretch;gap:14px;justify-content:center;padding-block:clamp(18px,3.8vh,48px)}
+  .hero-copy {display:flex;align-items:stretch;gap:11px;justify-content:center;padding-block:clamp(14px,2.25vh,28px)}
   .hero-heading h1 {font-size:clamp(2.4rem,8.8vw,3.6rem);margin:8px 0 0}.hero-purpose{max-width:55ch;padding:0}
   .hero-purpose p {font-size:1rem;line-height:1.42}.hero-purpose a {font-size:.87rem;margin-top:7px}
   .proof-history{padding:14px 12px 11px}.history-header{align-items:start}.plot-key{display:none}
-  .history-scale{height:248px;margin:10px 4px 0}.axis-guides i{display:none}.axis-guides small{display:block}
+  .history-scale{height:238px;margin:10px 4px 0}.axis-guides i{display:none}.axis-guides small{display:block}
   .history-events a {width:min(27cqw,140px);padding-bottom:20px}
   .history-events li:nth-child(even) a{padding-top:20px}
   .history-events b{font-size:.92rem}.history-events em{font-size:.75rem}
@@ -219,7 +219,9 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
   .record .question,.impact-blurb{font-size:.97rem}.record-name{font-size:1.22rem}
   .impact-heading{min-height:20px}.impact-heading strong{font-size:1.35rem}.impact-blurb{margin-top:4px}
 }
-@media(max-width:380px){.history-scale{height:274px}.history-events b{font-size:.86rem}.hero-heading h1{font-size:2.13rem}.plot-caption{font-size:.72rem}.stat small.breakdown{display:none}}
+@media(max-width:720px){.totals{padding-block:12px 15px}.stat small{display:none}.stat b{font-size:.92rem}.stat strong{font-size:2.35rem}}
+@media(max-width:380px){.history-scale{height:235px}.history-events b{font-size:.86rem}.hero-heading h1{font-size:2.13rem}.plot-caption{font-size:.72rem}.stat small.breakdown{display:none}}
+@media(max-width:350px){.history-scale{height:292px}}
 @media print{.night>.wrap{min-height:0}.hero-copy{padding-block:20px}.proof-link,.nav nav,footer,.skip{display:none}.night,.mast,.stakes{background:white;color:black}.hero h1 em,.stat b,.stat small,.lede,.stake-text p{color:#222}.catalogue{padding-block:20px}}
 </style>
 </head>
@@ -239,8 +241,8 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
           <div class="hero-copy">
             <div class="hero-heading"><p class="kicker">AI &amp; mathematics</p>
               <h1 id="hero-title">Open for decades.<br><em>Settled months apart.</em></h1></div>
-            <div class="hero-purpose"><p>Riemann’s question about prime numbers stood for 167 years. In 2026, it became one of three long-standing maths problems settled with AI.</p>
-              <a href="#index">Explore the nine problems and what each result changes</a></div>
+            <div class="hero-purpose"><p>AI helped settle three long-standing maths problems in 2026. Riemann’s question about prime numbers had been open for 167 years.</p>
+              <a href="#index">Explore the problems and their impact</a></div>
           </div>
           <section class="proof-history" id="timeline" aria-labelledby="timeline-title">
             <div class="history-header"><div><p class="plot-label">Proof timeline <span> / </span> 1859–2026</p>
