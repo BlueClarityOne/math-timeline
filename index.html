@@ -44,7 +44,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 .mast{border-bottom:1px solid #293440}.nav{min-height:78px;display:flex;align-items:center;gap:46px}
 .brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font-weight:700;letter-spacing:-.055em;font-size:1.26rem;white-space:nowrap}
 .brand img{display:block;width:38px;height:38px;flex:none}.brand-type{display:grid;gap:2px;line-height:1}.owner{font:650 .68rem/1.08 var(--sans);letter-spacing:.028em;color:var(--blue)}.publication{font-weight:650;letter-spacing:-.048em}
-.nav nav{display:flex;gap:26px}.nav nav a,.edition,.plot-key+span,.stat small{color:#c1ccd6}.nav nav a{font-weight:500;font-size:.85rem;text-decoration:none}.nav nav a:hover,.proof-link:hover,.foot summary:hover{text-decoration:underline;text-underline-offset:4px}
+.nav nav{display:flex;gap:26px}.nav nav a,.edition,.plot-key+span,.stat small{color:#c1ccd6}.nav nav a{white-space:nowrap;font-weight:500;font-size:.85rem;text-decoration:none}.nav nav a:hover,.proof-link:hover,.foot summary:hover{text-decoration:underline;text-underline-offset:4px}
 .edition{margin-left:auto;font: .8rem var(--mono)}.edition time{color:#ecece5}
 .hero{display:grid;grid-template-columns:1.08fr 1fr;gap:4%;align-items:center;padding:52px 0 43px}
 .kicker,.overline{display:flex;align-items:center;gap:11px;font:700 .76rem/1.2 var(--mono);letter-spacing:.13em;text-transform:uppercase}
@@ -66,7 +66,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 .stat strong{font:490 clamp(3rem,4.35vw,4.8rem)/.98 var(--sans);letter-spacing:-.08em;font-variant-numeric:tabular-nums}
 .stat b,.stat small{display:block}.stat b{font-size:clamp(1rem,1.43vw,1.29rem);font-weight:650;letter-spacing:-.025em;color:#f3f8fb}.stat small{font-size:.82rem;margin-top:3px}
 .stat .denominator{font:500 .73rem/1 var(--mono);letter-spacing:0;white-space:nowrap}.stat.won strong{white-space:nowrap}.stat.won{--outcome:var(--mint)}.stat.pending{--outcome:var(--amber)}.stat.prior{--outcome:var(--lavender)}
-.score-strip{display:flex;gap:3px;flex-basis:100%}.score-strip i{height:3px;width:9px;background:#37404b}.score-strip .on{background:var(--outcome)}.stat small.breakdown{display:block}
+.score-strip{display:flex;gap:3px;flex-basis:100%}.score-strip i{height:3px;width:9px;background:#37404b}.score-strip .on{background:var(--outcome)}.stat small.breakdown{display:block}.breakdown span{white-space:nowrap}
 .stat:hover b{text-decoration:underline;text-underline-offset:4px}.won strong{color:var(--mint)}.pending strong{color:var(--amber)}.prior strong{color:var(--lavender)}
 .catalogue{padding-block:48px 56px}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:25px}
 .overline{color:#31576e}.section-head h2,.chronology h2{font-size:clamp(2rem,3.25vw,3.7rem);letter-spacing:-.065em;line-height:1.06;font-weight:650;margin-top:9px}
@@ -143,6 +143,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 }
 @media(max-width:720px){.brand img{width:32px;height:32px}.brand-type{gap:3px}.owner{font-size:.61rem}.publication{font-size:.96rem}.nav{min-height:62px}.nav nav a{font-size:.8rem}.plate figcaption{font-size:.69rem;padding:9px 12px}.hero{gap:0}}
 @media(max-width:380px){.nav nav{gap:9px}.nav nav a{font-size:.74rem}.publication{font-size:.85rem}.brand img{width:29px;height:29px}.plot-title b{font-size:1.03rem}.plot-title{gap:6px}.plot-switch button{padding:5px}.stat .denominator{font-size:.62rem}.stat b{font-size:.84rem}}
+@media(max-width:350px){.nav{flex-wrap:wrap;justify-content:flex-start;gap:8px 20px;padding-block:10px}.nav nav{gap:14px}.nav nav a{padding-block:3px}}
 @media print{.filters,.proof-link,.nav nav,footer,.skip{display:none}.night,.mast,.stakes{background:white;color:black}.hero h1 em,.stat b,.stat small,.lede,.stake-text p{color:#222}.catalogue,.chronology{padding-block:20px}}
 </style>
 </head>
@@ -151,7 +152,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
   <header class="mast">
     <div class="wrap nav">
       <a class="brand" href="#top"><img src="./clarity-mark.png" width="38" height="38" alt=""><span class="brand-type"><span class="owner">Blue Clarity</span><span class="publication">The Proof Tracker</span></span></a>
-      <nav aria-label="Main navigation"><a href="#index">Problems</a><a href="#stakes">The stakes</a><a href="#timeline">Timeline</a></nav>
+      <nav aria-label="Main navigation"><a href="#index">Problems</a><a href="#stakes">Stakes</a><a href="#timeline">Timeline</a></nav>
       <span class="edition">Updated <time datetime="2026-11-24">24 Nov 2026</time></span>
     </div>
   </header>
@@ -172,7 +173,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
           </figure>
         </section>
         <section class="totals" aria-label="Outcomes for the nine problems tracked here">
-          <a class="stat won" href="#solved"><span class="score-strip" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></span><strong>3 <span class="denominator">of 9</span></strong><span><b>Settled with AI</b><small class="breakdown">2 proofs · 1 disproof</small></span></a>
+          <a class="stat won" href="#solved"><span class="score-strip" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></span><strong>3 <span class="denominator">of 9</span></strong><span><b>Settled with AI</b><small class="breakdown"><span>2 proofs</span> · <span>1 disproof</span></small></span></a>
           <a class="stat pending" href="#open"><span class="score-strip" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></span><strong>5</strong><span><b>Still open</b><small>P vs NP · Navier–Stokes · Three more</small></span></a>
           <a class="stat prior" href="#human"><span class="score-strip" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><strong>1</strong><span><b>Solved without AI</b><small>Poincaré conjecture</small></span></a>
         </section>
@@ -253,7 +254,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
       </div>
     </section>
     <section id="timeline" class="wrap chronology" aria-labelledby="timeline-title">
-      <div class="timeline-intro"><p class="overline">Timeline</p><h2 id="timeline-title">When the<br>evidence changed.</h2></div>
+      <div class="timeline-intro"><p class="overline">Timeline</p><h2 id="timeline-title">When the <br>evidence changed.</h2></div>
       <div class="events"><ol><li class="event"><a href="#problem/riemann"><time datetime="2026-11-21">21 Nov 2026</time><b>Riemann proof independently verified</b></a></li>
 <li class="event"><a href="#problem/riemann"><time datetime="2026-11-20">20 Nov 2026</time><b>A proof of the Riemann hypothesis is released</b></a></li>
 <li class="event"><a href="#problem/navier-stokes"><time datetime="2026-11-20">20 Nov 2026</time><b>A second Navier–Stokes claim</b></a></li></ol><details class="earlier"><summary><span class="when-closed">Show earlier milestones</span><span class="when-open">Hide earlier milestones</span></summary><ol><li class="event"><a href="#problem/yang-mills"><time datetime="2026-11-10">10 Nov 2026</time><b>Yang–Mills construction assessed</b></a></li>
