@@ -3,31 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111519">
+  <meta name="theme-color" content="#080b10">
   <meta name="description" content="Nine famous maths problems. Two proofs and one disproof with AI. Explore the evidence, the open questions and what their solutions could change.">
-  <title>The Proof Tracker — What has AI already solved?</title>
+  <title>The Proof Tracker by Blue Clarity | What has AI already solved?</title>
   <link rel="canonical" href="https://blueclarityone.github.io/math-timeline/">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="The Proof Tracker">
+  <meta property="og:site_name" content="Blue Clarity · The Proof Tracker">
   <meta property="og:url" content="https://blueclarityone.github.io/math-timeline/">
-  <meta property="og:title" content="What has AI already solved?">
+  <meta property="og:title" content="What has AI already solved? | Blue Clarity">
   <meta property="og:description" content="Nine famous maths problems. Two proofs and one disproof with AI. Explore what’s still open and what’s at stake.">
-  <meta property="og:image" content="https://blueclarityone.github.io/math-timeline/proof-tracker-share.png">
+  <meta property="og:image" content="https://blueclarityone.github.io/math-timeline/proof-tracker-share.png?v=clarity-1">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="The Proof Tracker. What has AI already solved? Nine maths problems, two proofs, one disproof. A surface plot shows three zeros of Riemann’s zeta function.">
+  <meta property="og:image:alt" content="The Proof Tracker by Blue Clarity. What has AI already solved? Nine maths problems, two proofs, one disproof. A surface plot shows three zeros of Riemann’s zeta function.">
+  <meta name="twitter:creator" content="@blue_clarity">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="What has AI already solved?">
+  <meta name="twitter:title" content="What has AI already solved? | Blue Clarity">
   <meta name="twitter:description" content="Nine famous maths problems. Two proofs and one disproof with AI. Explore what’s still open and what’s at stake.">
-  <meta name="twitter:image" content="https://blueclarityone.github.io/math-timeline/proof-tracker-share.png">
-  <meta name="twitter:image:alt" content="The Proof Tracker. What has AI already solved? Nine maths problems, two proofs, one disproof. A surface plot shows three zeros of Riemann’s zeta function.">
-  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MCA0MCI+PHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOSIgZmlsbD0iIzEwMmQyZSIvPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzk3ZjRjNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiPjxwYXRoIGQ9Ik00IDI2YzcgMCA5LTE2IDE0LTE2IDUgMCA2IDIwIDExIDIwIDMgMCA1LTggNy0xMSIvPjxwYXRoIGQ9Ik00IDI5YzYgMCAxMS0xMiAxNS0xMiA0IDAgNiA4IDEwIDggMyAwIDUtMyA3LTYiIG9wYWNpdHk9Ii42NSIvPjwvZz48L3N2Zz4K" type="image/svg+xml">
-  <style>:root {
+  <meta name="twitter:image" content="https://blueclarityone.github.io/math-timeline/proof-tracker-share.png?v=clarity-1">
+  <meta name="twitter:image:alt" content="The Proof Tracker by Blue Clarity. What has AI already solved? Nine maths problems, two proofs, one disproof. A surface plot shows three zeros of Riemann’s zeta function.">
+  <link rel="icon" type="image/png" sizes="160x160" href="./clarity-mark.png">
+  <link rel="preload" href="./assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>@font-face{font-family:Inter;src:url("./assets/inter-latin.woff2") format("woff2");font-style:normal;font-weight:100 900;font-display:swap}
+:root {
   color-scheme:light;
-  --night:#111519; --stone:#f5f4ef; --ink:#171d21; --line:#cecfca; --secondary:#525c60;
-  --ember:#ff8564; --mint:#8bdbbd; --amber:#f1b569; --lavender:#b5bfd9;
-  --sans:"Segoe UI",Arial,Helvetica,sans-serif; --serif:Georgia,"Times New Roman",serif;
+  --night:#080b10; --stone:#f3f6f8; --ink:#101c2a; --line:#cbd5dd; --secondary:#485a69;
+  --blue:#a8d8ea; --mint:#b8e6c8; --amber:#f5e6a3; --lavender:#c4b5e0;
+  --sans:Inter,"Segoe UI",Arial,sans-serif;
   --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
   font:100%/1.45 var(--sans); color:var(--ink); background:var(--stone); scroll-padding-top:20px;
 }
@@ -37,42 +40,45 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 [hidden]{display:none!important}summary{list-style:none}summary::-webkit-details-marker{display:none}
 .wrap{width:min(1260px,calc(100% - clamp(38px,9vw,148px)));margin-inline:auto}
 .skip{position:absolute;left:15px;top:-100px;padding:12px;background:white;color:black;z-index:10}.skip:focus{top:12px}
-.mast,.night,.stakes,footer{background:var(--night);color:#fcf8f0}
-.mast{border-bottom:1px solid #353b3e}.nav{min-height:69px;display:flex;align-items:center;gap:40px}
+.mast,.night,.stakes,footer{background:var(--night);color:#f5f8fb}
+.mast{border-bottom:1px solid #293440}.nav{min-height:78px;display:flex;align-items:center;gap:46px}
 .brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font-weight:700;letter-spacing:-.055em;font-size:1.26rem;white-space:nowrap}
-.mark{display:inline-flex;position:relative;width:24px;height:26px;align-items:center;justify-content:center;gap:2px;transform:skewY(-20deg)}.mark i{width:4px;background:var(--ember);display:block}.mark i:nth-child(1){height:11px}.mark i:nth-child(2){height:19px}.mark i:nth-child(3){height:26px}.mark i:nth-child(4){height:16px}
-.nav nav{display:flex;gap:26px}.nav nav a,.edition,.plot-key+span,.stat small{color:#c3c8ca}.nav nav a{font-size:.9rem;text-decoration:none}.nav nav a:hover,.proof-link:hover,.foot summary:hover{text-decoration:underline;text-underline-offset:4px}
+.brand img{display:block;width:38px;height:38px;flex:none}.brand-type{display:grid;gap:2px;line-height:1}.owner{font:650 .68rem/1.08 var(--sans);letter-spacing:.028em;color:var(--blue)}.publication{font-weight:650;letter-spacing:-.048em}
+.nav nav{display:flex;gap:26px}.nav nav a,.edition,.plot-key+span,.stat small{color:#c1ccd6}.nav nav a{font-weight:500;font-size:.85rem;text-decoration:none}.nav nav a:hover,.proof-link:hover,.foot summary:hover{text-decoration:underline;text-underline-offset:4px}
 .edition{margin-left:auto;font: .8rem var(--mono)}.edition time{color:#ecece5}
-.hero{display:grid;grid-template-columns:1.08fr 1fr;gap:4%;align-items:center;padding:47px 0 36px}
+.hero{display:grid;grid-template-columns:1.08fr 1fr;gap:4%;align-items:center;padding:52px 0 43px}
 .kicker,.overline{display:flex;align-items:center;gap:11px;font:700 .76rem/1.2 var(--mono);letter-spacing:.13em;text-transform:uppercase}
-.kicker{color:var(--ember)}.rule{width:23px;height:2px;background:currentColor}
-.hero h1{font-size:clamp(3.9rem,6.6vw,6.6rem);line-height:.94;letter-spacing:-.072em;margin:19px 0 23px;font-weight:650}
-.hero h1 em,.stakes h2 em{color:var(--ember);font-family:var(--serif);font-weight:400;letter-spacing:-.075em}
-.lede{max-width:46ch;font-size:clamp(1rem,1.35vw,1.2rem);line-height:1.52;color:#d2d2d0}
-.proof-link{display:inline-flex;gap:10px;align-items:center;margin-top:18px;padding-bottom:3px;border-bottom:1px solid #9d6c5d;text-decoration:none;font-weight:600;font-size:.95rem;color:#fff6eb}.proof-link span{color:var(--ember)}
-.plate{margin:0;min-width:0;align-self:stretch;position:relative;display:flex;flex-direction:column;justify-content:center}
-#surface{display:block;width:100%;height:clamp(205px,20vw,315px);background:radial-gradient(ellipse at 52% 55%,#252329 0%,transparent 69%)}
-.plate figcaption{display:flex;align-items:center;justify-content:center;gap:10px;color:#c3c8ca;font:.79rem/1.4 var(--mono);text-align:center}
-.plot-key{width:8px;height:8px;border-radius:50%;background:#ffc3a7;outline:1px solid #d88970;outline-offset:2px;flex:none}
-.plot-head{display:flex;align-items:center;justify-content:space-between;gap:7px;padding:0 1% 0 4%;font:.79rem var(--mono);color:#b9bfbd}.plot-switch{display:flex;border:1px solid #4d5253;border-radius:3px;overflow:hidden}.plot-switch button{border:0;color:#c5cac9;background:transparent;padding:5px 8px;font:.75rem var(--mono)}.plot-switch button[aria-pressed=true]{color:#171b1e;background:#f1cdbf}.plot-switch button:focus-visible{outline-offset:-2px}
-.totals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #484b4c;padding:19px 0 24px;gap:20px}
-.stat{display:flex;align-items:center;gap:clamp(10px,1.8vw,29px);text-decoration:none;position:relative;min-width:0}
-.stat+.stat{border-left:1px solid #424749;padding-left:clamp(16px,3vw,53px)}
-.stat strong{font:500 clamp(3rem,4.35vw,4.8rem)/.98 var(--sans);letter-spacing:-.08em;font-variant-numeric:tabular-nums}
-.stat b,.stat small{display:block}.stat b{font-size:clamp(1rem,1.43vw,1.29rem);font-weight:650;letter-spacing:-.025em;color:#faf8f3}.stat small{font-size:.82rem;margin-top:3px}
-.stat .denominator{font:600 .83rem/1 var(--mono);letter-spacing:0;white-space:nowrap}.stat.won strong{white-space:nowrap}.stat small.breakdown{display:block}
+.kicker{color:var(--blue)}.rule{width:24px;height:1px;background:currentColor;position:relative}.rule::after{content:'';position:absolute;right:0;top:-2px;width:5px;height:5px;background:currentColor;border-radius:50%}
+.hero h1{font-size:clamp(3.15rem,5.65vw,5.8rem);line-height:.99;letter-spacing:-.076em;margin:21px 0 23px;font-weight:620}
+.hero h1 em,.stakes h2 em{color:var(--blue);font-style:normal;font-weight:480;letter-spacing:-.078em}
+.lede{max-width:46ch;font-size:clamp(1rem,1.35vw,1.2rem);line-height:1.52;color:#c5cdd6}
+.proof-link{display:inline-flex;gap:10px;align-items:center;margin-top:18px;padding-bottom:3px;border-bottom:1px solid #517c8f;text-decoration:none;font-weight:600;font-size:.95rem;color:#eaf8ff}.proof-link span{color:var(--blue)}
+.plate{min-width:0;position:relative;display:flex;flex-direction:column;overflow:hidden;justify-content:space-between;align-self:center;border:1px solid #375575;border-radius:4px;background-color:#102744;background-image:linear-gradient(#78acd112 1px,transparent 1px),linear-gradient(90deg,#78acd112 1px,transparent 1px),radial-gradient(ellipse at 70% 30%,#1c4064,transparent 88%);background-size:24px 24px,24px 24px,100% 100%}
+#surface{display:block;width:100%;height:clamp(190px,16.5vw,255px)}
+.plate figcaption{display:flex;align-items:center;gap:9px;padding:10px 15px;color:#d1e4f3;font:.72rem/1.4 var(--mono);border-top:1px solid #57789b70;background:#0a1b30bb}
+.plot-key{width:6px;height:6px;border-radius:50%;background:#e2faff;outline:1px solid #a8d8eaaa;outline-offset:2px;flex:none}
+.plot-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 13px;font:550 .76rem var(--sans);color:#e4f3ff;background:#0a1b30ad;border-bottom:1px solid #57789b70}
+.plot-title{display:flex;align-items:center;gap:9px}.plot-title b{font:italic 1.36rem/1 Georgia,serif;color:#c7e9f7;padding-right:9px;border-right:1px solid #60809b}
+.plot-switch{display:flex;border:1px solid #6684a0;border-radius:2px;overflow:hidden}.plot-switch button{border:0;color:#d5e5f1;background:#0c2037;padding:5px 8px;font:.72rem var(--mono)}.plot-switch button[aria-pressed=true]{color:#0e2638;background:var(--blue)}.plot-switch button:focus-visible{outline-offset:-3px}
+.totals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #3b4854;padding:23px 0 27px;gap:18px}
+.stat{display:flex;flex-wrap:wrap;align-items:center;gap:8px clamp(10px,1.4vw,23px);text-decoration:none;position:relative;min-width:0}
+.stat+.stat{border-left:1px solid #303d49;padding-left:clamp(16px,3vw,53px)}
+.stat strong{font:490 clamp(3rem,4.35vw,4.8rem)/.98 var(--sans);letter-spacing:-.08em;font-variant-numeric:tabular-nums}
+.stat b,.stat small{display:block}.stat b{font-size:clamp(1rem,1.43vw,1.29rem);font-weight:650;letter-spacing:-.025em;color:#f3f8fb}.stat small{font-size:.82rem;margin-top:3px}
+.stat .denominator{font:500 .73rem/1 var(--mono);letter-spacing:0;white-space:nowrap}.stat.won strong{white-space:nowrap}.stat.won{--outcome:var(--mint)}.stat.pending{--outcome:var(--amber)}.stat.prior{--outcome:var(--lavender)}
+.score-strip{display:flex;gap:3px;flex-basis:100%}.score-strip i{height:3px;width:9px;background:#37404b}.score-strip .on{background:var(--outcome)}.stat small.breakdown{display:block}
 .stat:hover b{text-decoration:underline;text-underline-offset:4px}.won strong{color:var(--mint)}.pending strong{color:var(--amber)}.prior strong{color:var(--lavender)}
 .catalogue{padding-block:48px 56px}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:25px}
-.overline{color:#566166}.section-head h2,.chronology h2{font-size:clamp(2rem,3.25vw,3.7rem);letter-spacing:-.065em;line-height:1.06;font-weight:650;margin-top:9px}
+.overline{color:#31576e}.section-head h2,.chronology h2{font-size:clamp(2rem,3.25vw,3.7rem);letter-spacing:-.065em;line-height:1.06;font-weight:650;margin-top:9px}
 .filters{position:relative}.filters>summary,.earlier>summary{border:1px solid #aeb5b3;display:inline-flex;gap:12px;align-items:center;border-radius:3px;padding:8px 13px;background:transparent;font-size:.9rem;font-weight:600;white-space:nowrap}
 .filters>summary::before{content:"";width:15px;height:13px;background:linear-gradient(#263234,#263234) 0 3px/100% 1px no-repeat,linear-gradient(#263234,#263234) 0 9px/100% 1px no-repeat,linear-gradient(#263234,#263234) 3px 1px/3px 5px no-repeat,linear-gradient(#263234,#263234) 9px 7px/3px 5px no-repeat}
-.filter-body{position:absolute;right:0;top:calc(100% + 8px);background:#fffefa;z-index:4;border:1px solid #acb6b3;padding:18px;display:grid;gap:11px;width:min(290px,86vw);box-shadow:0 10px 32px #10192220}
+.filter-body{position:absolute;right:0;top:calc(100% + 8px);background:#fafcfd;z-index:4;border:1px solid #acb6b3;padding:18px;display:grid;gap:11px;width:min(290px,86vw);box-shadow:0 10px 32px #10192220}
 .filter-body label{display:grid;gap:3px;font-weight:600;font-size:.875rem}.filter-body input,.filter-body select{width:100%;padding:7px 8px;border:1px solid #a8b4b0;background:white;border-radius:2px;font-size:1rem}
 .filter-body button,.none button{justify-self:start;background:none;border:0;padding:2px 0;text-decoration:underline;text-underline-offset:3px;font-size:.9rem}
 .filter-feedback:empty{display:none}.filter-feedback{font-size:.875rem;margin-bottom:10px;color:var(--secondary)}
 .board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3.4vw,54px);align-items:start}.column{min-width:0}.group{scroll-margin-top:12px;min-width:0}
 .group h3{display:flex;align-items:center;gap:10px;font-size:1.25rem;font-weight:650;letter-spacing:-.045em;padding:10px 0 11px;border-top:3px solid var(--accent);border-bottom:1px solid var(--line)}
-.solved{--accent:#25735c;--sub:#e3f0e9;--badge:#215e4c}.open{--accent:#a66526;--sub:#f4e9d8;--badge:#814716}.human{--accent:#586781;--sub:#e7eaf1;--badge:#43516c;margin-top:24px}
+.solved{--accent:#2e6a4b;--sub:#dceee3;--badge:#224d38}.open{--accent:#8c701b;--sub:#f4edc9;--badge:#665110}.human{--accent:#72618a;--sub:#e9e2ef;--badge:#524168;margin-top:24px}
 .state-icon{width:18px;height:18px;display:inline-grid;place-items:center;border-radius:50%;flex:none}
 .check{background:var(--accent)}.check::after{content:"";width:8px;height:4px;border-left:2px solid white;border-bottom:2px solid white;transform:rotate(-45deg) translateY(-1px)}
 .ring{border:2px dashed var(--accent)}.human-icon{border:1px solid var(--accent);background:linear-gradient(var(--accent),var(--accent)) center/8px 2px no-repeat}
@@ -80,61 +86,63 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 .record>summary:hover .record-name{text-decoration:underline;text-underline-offset:4px}
 .record-name{display:block;font-size:1.12rem;font-weight:650;line-height:1.2;letter-spacing:-.035em}.question{display:block;margin-top:4px;color:var(--secondary);font-size:.95rem;line-height:1.4;max-width:49ch}
 .status{font:600 .72rem/1.3 var(--mono);color:var(--badge);background:var(--sub);padding:4px 6px;border-radius:2px;white-space:nowrap}
-.open .record[data-status="open"] .status{color:#5c554c;background:#eae7df}
+.open .record[data-status="open"] .status{color:#65571d;background:#f0ebd8}
 .toggle{width:12px;height:12px;position:relative}.toggle::before,.toggle::after{content:"";position:absolute;top:5px;left:0;width:12px;height:1.5px;background:#58625f}.toggle::after{transform:rotate(90deg)}.record[open] .toggle::after{display:none}
 .record[open]{background:#ffffff6b}.record[open]>summary{padding-bottom:10px}
 .record-body{padding:2px 16px 18px;border-left:2px solid var(--accent);margin:0 0 15px 2px}
 .record-body h4{font-size:.83rem;letter-spacing:.01em;margin:10px 0 3px}.record-body p{font-size:.97rem;line-height:1.5;color:#38444a;max-width:67ch}
-.sources{margin-top:10px}.sources summary{font-size:.85rem;font-weight:600;text-decoration:underline;text-underline-offset:3px}.sources ul{margin:7px 0 0;padding-left:18px}.sources a{font-size:.87rem;color:#334e53;text-underline-offset:3px}
+.sources{margin-top:10px}.sources summary{font-size:.85rem;font-weight:600;text-decoration:underline;text-underline-offset:3px}.sources ul{margin:7px 0 0;padding-left:18px}.sources a{font-size:.87rem;color:#25566f;text-underline-offset:3px}
 .none{padding-block:18px}
-.impact-compare{border:1px solid #c6c9c2;background:#eeeee8;border-radius:3px;margin:0 0 22px;scroll-margin-top:14px}
+.impact-compare{border:1px solid #beccd7;background:#e2ecf3;border-radius:3px;margin:0 0 22px;scroll-margin-top:14px}
 .impact-compare>summary{display:flex;align-items:center;gap:13px;min-height:48px;padding:10px 16px}
 .compare-title{display:inline-flex;align-items:center;gap:10px;font-size:1rem;font-weight:650;letter-spacing:-.025em}
-.scale-range{margin-left:auto;color:#505957;font:.8rem/1.3 var(--mono)}
+.scale-range{margin-left:auto;color:#405b6d;font:.8rem/1.3 var(--mono)}
 .compare-icon{height:17px;display:inline-flex;align-items:end;gap:2px;flex:none}
-.compare-icon i{width:3px;background:#9b5136;height:5px}
+.compare-icon i{width:3px;background:#306584;height:5px}
 .compare-icon i:nth-child(2){height:8px}.compare-icon i:nth-child(3){height:11px}.compare-icon i:nth-child(4){height:14px}.compare-icon i:nth-child(5){height:17px}
 .impact-compare>summary:hover .compare-title,.impact-tier a:hover{text-decoration:underline;text-underline-offset:3px}
 .impact-compare[open]>summary .toggle::after{display:none}
-.compare-content{border-top:1px solid #c6c9c2;background:#faf9f5;padding:17px 19px 7px}
-.compare-content>p{font-size:.95rem;line-height:1.5;color:#46504e;max-width:80ch}
+.compare-content{border-top:1px solid #beccd7;background:#f9fbfd;padding:17px 19px 7px}
+.compare-content>p{font-size:.95rem;line-height:1.5;color:#3c5363;max-width:80ch}
 .impact-ladder,.impact-tier ul{padding:0;list-style:none}.impact-ladder{margin-top:15px}
 .impact-tier{display:grid;grid-template-columns:minmax(180px,.8fr) minmax(0,1.6fr);gap:4%;padding:16px 0;border-top:1px solid var(--line)}
 .tier-info{display:flex;gap:12px;align-items:baseline}.tier-info h3{font-size:1rem;line-height:1.25;letter-spacing:-.02em}
-.tier-info p,.impact-tier li p{font-size:.9rem;color:#4a5555;line-height:1.46;margin-top:3px}
-.tier-number{font:600 1.7rem/1 var(--mono);letter-spacing:-.09em;color:#81452f;white-space:nowrap}
+.tier-info p,.impact-tier li p{font-size:.9rem;color:#485864;line-height:1.46;margin-top:3px}
+.tier-number{font:600 1.7rem/1 var(--mono);letter-spacing:-.09em;color:#285b78;white-space:nowrap}
 .tier-number small{font-size:.76rem;font-weight:500;letter-spacing:0}
-.impact-tier li+li{margin-top:11px}.impact-tier a{font-size:1rem;font-weight:650;text-decoration-color:#aaa9a1;text-underline-offset:3px}
-.impact-outcome{display:inline-block;margin-left:6px;font:.75rem var(--mono);color:#54625c}
-.impact-line{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-top:8px;font:.8rem/1.4 var(--sans);color:#545a56}.impact-line b{color:#252d28;font-variant-numeric:tabular-nums}
-.impact-meter{display:inline-flex;gap:2px;flex:none}.impact-meter i{display:block;width:6px;height:9px;border-radius:1px}.impact-meter .filled{background:#975336}.impact-meter .empty{border:1px solid #a6aaa3}
+.impact-tier li+li{margin-top:11px}.impact-tier a{font-size:1rem;font-weight:650;text-decoration-color:#80a0b3;text-underline-offset:3px}
+.impact-outcome{display:inline-block;margin-left:6px;font:.75rem var(--mono);color:#4e616f}
+.impact-line{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-top:8px;font:.8rem/1.4 var(--sans);color:#455765}.impact-line b{color:#1b2d3a;font-variant-numeric:tabular-nums}
+.impact-meter{display:inline-flex;gap:2px;flex:none}.impact-meter i{display:block;width:6px;height:9px;border-radius:1px}.impact-meter .filled{background:#366b88}.impact-meter .empty{border:1px solid #98acb9}
 @media(max-width:620px){
   .impact-compare>summary{padding:10px;gap:8px;flex-wrap:wrap}.scale-range{font-size:.74rem}
-  .compare-content{padding:13px 12px 4px}.impact-tier{grid-template-columns:1fr;gap:10px;padding:13px 0}.impact-tier ul{padding-left:12px;border-left:1px solid #c6c9c2}
+  .compare-content{padding:13px 12px 4px}.impact-tier{grid-template-columns:1fr;gap:10px;padding:13px 0}.impact-tier ul{padding-left:12px;border-left:1px solid #beccd7}
 }
 @media(max-width:395px){.impact-compare>summary{display:grid;grid-template-columns:1fr 14px;gap:1px 6px}.impact-compare .scale-range{margin:0 0 0 33px;grid-column:1}.impact-compare .toggle{grid-column:2;grid-row:1/3}}
-.stakes{border-top:4px solid #d77455}.stake-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:8%;padding-block:48px}
+.stakes{border-top:4px solid #6da8c3}.stake-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:8%;padding-block:48px}
 .stakes h2{font-size:clamp(2.3rem,4.3vw,4.7rem);line-height:1.01;letter-spacing:-.06em;margin-top:14px;font-weight:560}
-.stake-text{display:grid;gap:20px}.stake-text>div{border-left:2px solid var(--ember);padding-left:16px}.stake-text>div+div{border-color:var(--mint)}
-.stake-text h3{font-size:1.03rem;letter-spacing:-.02em;color:var(--ember)}.stake-text>div+div h3{color:var(--mint)}.stake-text p{color:#d7d9d8;max-width:59ch;font-size:1rem;line-height:1.5;margin-top:4px}
+.stake-text{display:grid;gap:20px}.stake-text>div{border-left:2px solid #f5c6d0;padding-left:16px}.stake-text>div+div{border-color:var(--mint)}
+.stake-text h3{font-size:1.03rem;letter-spacing:-.02em;color:#f5c6d0}.stake-text>div+div h3{color:var(--mint)}.stake-text p{color:#d7d9d8;max-width:59ch;font-size:1rem;line-height:1.5;margin-top:4px}
 .chronology{display:grid;grid-template-columns:.74fr 1.26fr;gap:5%;padding-block:56px 64px}
-.events ol{list-style:none;padding:0}.event{border-top:1px solid var(--line)}.event a{padding:12px 2px;text-decoration:none;display:grid;grid-template-columns:108px 1fr;align-items:baseline;gap:8px}.event a:hover b{text-decoration:underline;text-underline-offset:4px}.event time{font:.82rem/1.4 var(--mono);color:var(--secondary)}.event b{font-size:1rem;letter-spacing:-.025em;font-weight:620}
+.events ol{list-style:none;padding:0}.event{border-top:1px solid var(--line)}.event a{position:relative;padding:13px 2px 13px 17px;text-decoration:none;display:grid;grid-template-columns:108px 1fr;align-items:baseline;gap:8px}.event a::before{content:"";position:absolute;left:1px;top:20px;width:5px;height:5px;border:1.5px solid #45748f;border-radius:50%}.event:first-child a::before{background:#45748f}.event a:hover b{text-decoration:underline;text-underline-offset:4px}.event time{font:.82rem/1.4 var(--mono);color:var(--secondary)}.event b{font-size:1rem;letter-spacing:-.025em;font-weight:620}
 .earlier>summary{margin:12px 0}.earlier>summary::after{content:"+"}.earlier[open]>summary::after{content:"−"}.earlier .when-open,.earlier[open] .when-closed{display:none}.earlier[open] .when-open{display:inline}
-.foot{display:flex;align-items:flex-start;justify-content:space-between;gap:40px;padding-block:23px 29px}.foot details{max-width:62ch;font-size:.9rem;color:#d3d8d6}.foot summary{text-align:right}.foot details p{margin:12px 0 6px}.foot details a{color:var(--mint)}
+.foot{display:flex;align-items:flex-start;justify-content:space-between;gap:40px;padding-block:23px 29px}.foot details{max-width:62ch;font-size:.9rem;color:#d3dae2}.foot summary{text-align:right}.foot details p{margin:12px 0 6px}.foot details a{color:var(--mint)}
 @media(min-width:1550px){.hero{padding-block:55px 45px}}
 @media(max-width:990px){.nav{gap:26px}.hero{gap:2%;grid-template-columns:1.08fr 1fr}.record>summary{grid-template-columns:1fr 14px;row-gap:7px}.record>summary .status{grid-column:1;grid-row:2;justify-self:start}.toggle{grid-column:2;grid-row:1/3}.stat+.stat{padding-left:18px}}
-@media(max-width:720px){.wrap{width:calc(100% - 36px)}.nav{min-height:57px;justify-content:space-between;gap:12px}.nav nav{gap:15px}.nav nav a{font-size:.85rem}.edition{display:none}.brand{font-size:1.1rem;gap:7px}.hero{grid-template-columns:1fr;padding:28px 0 18px}.hero-copy{z-index:1}.hero h1{font-size:clamp(3.6rem,10vw,5.2rem);margin:13px 0 15px}.lede{max-width:49ch;font-size:1rem}.proof-link{margin-top:13px}
-.plate{margin:4px 0 1px}.plate canvas#surface{height:clamp(130px,28vw,180px)}.plate figcaption{font-size:.74rem}
-.totals{gap:10px;padding:15px 0 19px}.stat{display:block}.stat+.stat{padding-left:12px}.stat strong{font-size:2.55rem}.stat b{font-size:.95rem;line-height:1.15;margin-top:5px}.stat small{display:none}
+@media(max-width:720px){.wrap{width:calc(100% - 36px)}.nav{min-height:57px;justify-content:space-between;gap:12px}.nav nav{gap:15px}.nav nav a{font-size:.85rem}.edition{display:none}.brand{font-size:1.1rem;gap:7px}.hero{grid-template-columns:1fr;padding:28px 0 18px}.hero-copy{z-index:1}.hero h1{font-size:clamp(3.1rem,10.9vw,5.15rem);margin:13px 0 15px}.lede{max-width:49ch;font-size:1rem}.proof-link{margin-top:13px}
+.plate{margin:4px 0 1px}.plate canvas#surface{height:clamp(155px,32vw,215px)}.plate figcaption{font-size:.74rem}
+.totals{gap:10px;padding:15px 0 19px}.stat{display:block}.score-strip{display:flex;margin-bottom:9px;gap:2px}.score-strip i{width:6px}.stat+.stat{padding-left:12px}.stat strong{font-size:2.55rem}.stat b{font-size:.95rem;line-height:1.15;margin-top:5px}.stat small{display:none}
 .catalogue{padding:32px 0 38px}.section-head{align-items:flex-start;margin-bottom:19px}.section-head h2,.chronology h2{font-size:2.1rem}.board{display:flex;flex-direction:column;gap:23px}.column{display:contents}.group{width:100%}.solved{order:1}.open{order:2}.human{order:3;margin:0}
 .record>summary{grid-template-columns:1fr auto 12px;gap:9px}.record>summary .status{grid-row:auto;grid-column:auto}.toggle{grid-column:auto;grid-row:auto}.record-name{font-size:1.05rem}.question{font-size:.92rem}.filters>summary{padding:6px 8px;font-size:.81rem}.stake-grid,.chronology{grid-template-columns:1fr;gap:24px;padding-block:33px}.timeline-intro br{display:none}.foot{gap:15px}.foot details[open]{max-width:62%}}
 @media(max-width:450px){.nav nav{gap:11px}.section-head{flex-wrap:wrap;align-items:flex-end;gap:12px}.filter-body{left:0;right:auto}.section-head .filters{margin-left:0}.section-head:has(.filters[open]){display:block}.section-head .filters[open]{margin-top:12px}.record>summary{grid-template-columns:1fr 14px;row-gap:6px}.record>summary .status{grid-column:1;grid-row:2}.toggle{grid-column:2;grid-row:1/3}.event a{grid-template-columns:93px 1fr}.foot{flex-wrap:wrap}.foot details[open]{max-width:100%}.foot details[open] summary{text-align:left}}
-@media(max-width:350px){.wrap{width:calc(100% - 26px)}.nav{gap:5px}.nav nav{gap:7px}.nav nav a{font-size:.79rem}.brand{font-size:1rem}.hero h1{font-size:3.25rem}}
-@media(max-width:720px){.plot-head{padding:0;font-size:.74rem}.plate{margin-top:18px}}
+@media(max-width:350px){.wrap{width:calc(100% - 26px)}.nav{gap:5px}.nav nav{gap:7px}.nav nav a{font-size:.79rem}.brand{font-size:1rem}.hero h1{font-size:2.85rem}}
+@media(max-width:720px){.plot-head{padding:8px 11px;font-size:.74rem}.plate{margin-top:18px}}
 @media(max-width:720px){
   .night>.wrap{display:grid}.night .hero{display:contents}.hero-copy{grid-row:1;padding:28px 0 19px}
-  .totals{grid-row:2;border-bottom:1px solid #3c4143}.night .plate{grid-row:3;margin:13px 0 17px}
+  .totals{grid-row:2;border-bottom:1px solid #3c4143}.night .plate{grid-row:3;margin:17px 0 21px}
 }
+@media(max-width:720px){.brand img{width:32px;height:32px}.brand-type{gap:3px}.owner{font-size:.61rem}.publication{font-size:.96rem}.nav{min-height:62px}.nav nav a{font-size:.8rem}.plate figcaption{font-size:.69rem;padding:9px 12px}.hero{gap:0}}
+@media(max-width:380px){.nav nav{gap:9px}.nav nav a{font-size:.74rem}.publication{font-size:.85rem}.brand img{width:29px;height:29px}.plot-title b{font-size:1.03rem}.plot-title{gap:6px}.plot-switch button{padding:5px}.stat .denominator{font-size:.62rem}.stat b{font-size:.84rem}}
 @media print{.filters,.proof-link,.nav nav,footer,.skip{display:none}.night,.mast,.stakes{background:white;color:black}.hero h1 em,.stat b,.stat small,.lede,.stake-text p{color:#222}.catalogue,.chronology{padding-block:20px}}
 </style>
 </head>
@@ -142,7 +150,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
   <a class="skip" href="#index">Skip to the problems</a>
   <header class="mast">
     <div class="wrap nav">
-      <a class="brand" href="#top"><span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>The Proof Tracker</a>
+      <a class="brand" href="#top"><img src="./clarity-mark.png" width="38" height="38" alt=""><span class="brand-type"><span class="owner">Blue Clarity</span><span class="publication">The Proof Tracker</span></span></a>
       <nav aria-label="Main navigation"><a href="#index">Problems</a><a href="#stakes">The stakes</a><a href="#timeline">Timeline</a></nav>
       <span class="edition">Updated <time datetime="2026-11-24">24 Nov 2026</time></span>
     </div>
@@ -154,19 +162,19 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
           <div class="hero-copy">
             <p class="kicker"><span class="rule"></span> AI &amp; mathematics</p>
             <h1 id="hero-title">What has AI<br><em>already solved?</em></h1>
-            <p class="lede">A prediction about prime numbers stood unproved for 167 years. On 20 November 2026, Levent Alpöge released a proof of the Riemann hypothesis developed with Claude. Independent teams verified it.</p>
+            <p class="lede">A prediction about prime numbers stood unproved for 167 years. On 20 November 2026, Levent Alpöge released a proof of the Riemann hypothesis developed with Claude. Independent teams checked the formal proof.</p>
             <a class="proof-link" href="#problem/riemann">Read the Riemann result <span aria-hidden="true">↗</span></a>
           </div>
           <figure class="plate">
-            <div class="plot-head"><span>Riemann’s zeta function</span><div class="plot-switch" aria-label="Plot view"><button type="button" data-plot="surface" aria-pressed="true">Surface</button><button type="button" data-plot="trace" aria-pressed="false">Trace</button></div></div>
+            <div class="plot-head"><span class="plot-title"><b aria-hidden="true">ζ(s)</b> Riemann’s zeta function</span><div class="plot-switch" aria-label="Plot view"><button type="button" data-plot="surface" aria-pressed="true">Surface</button><button type="button" data-plot="trace" aria-pressed="false">Trace</button></div></div>
             <canvas id="surface" role="img" aria-label="An inverse-height plot of Riemann’s zeta function. Peaks mark its first three nontrivial zeros."></canvas>
             <figcaption><span class="plot-key"></span><span id="plot-caption">Each peak marks a place where the function reaches zero.</span></figcaption>
           </figure>
         </section>
         <section class="totals" aria-label="Outcomes for the nine problems tracked here">
-          <a class="stat won" href="#solved"><strong>3 <span class="denominator">of 9</span></strong><span><b>Settled with AI</b><small class="breakdown">2 proofs · 1 disproof</small></span></a>
-          <a class="stat pending" href="#open"><strong>5</strong><span><b>Still open</b><small>P vs NP · Navier–Stokes · Three more</small></span></a>
-          <a class="stat prior" href="#human"><strong>1</strong><span><b>Solved without AI</b><small>Poincaré conjecture</small></span></a>
+          <a class="stat won" href="#solved"><span class="score-strip" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></span><strong>3 <span class="denominator">of 9</span></strong><span><b>Settled with AI</b><small class="breakdown">2 proofs · 1 disproof</small></span></a>
+          <a class="stat pending" href="#open"><span class="score-strip" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></span><strong>5</strong><span><b>Still open</b><small>P vs NP · Navier–Stokes · Three more</small></span></a>
+          <a class="stat prior" href="#human"><span class="score-strip" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><strong>1</strong><span><b>Solved without AI</b><small>Poincaré conjecture</small></span></a>
         </section>
       </div>
     </div>
@@ -255,7 +263,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 <li class="event"><a href="#problem/poincare"><time datetime="2010">2010</time><b>The first Millennium Prize</b></a></li></ol></details></div>
     </section>
   </main>
-  <footer><div class="wrap foot"><a class="brand" href="#top"><span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>The Proof Tracker</a><details id="methodology"><summary>How we count</summary><p>We track the seven Millennium Prize Problems and two other conjectures. A checked proof or counterexample counts as a resolution. Claims under review and partial results stay open. Each entry links to its evidence. Clay awards prizes through a separate review.</p><a href="https://www.claymath.org/millennium-problems/rules/">Clay’s prize rules</a></details></div></footer>
+  <footer><div class="wrap foot"><a class="brand" href="#top"><img src="./clarity-mark.png" width="38" height="38" alt=""><span class="brand-type"><span class="owner">Blue Clarity</span><span class="publication">The Proof Tracker</span></span></a><details id="methodology"><summary>How we count</summary><p>We track the seven Millennium Prize Problems and two other conjectures. A checked proof or counterexample counts as a resolution. Claims under review and partial results stay open. Each entry links to its evidence. Clay awards prizes through a separate review.</p><a href="https://www.claymath.org/millennium-problems/rules/">Clay’s prize rules</a></details></div></footer>
   <script>"use strict";
 (() => {
   const get = id => document.getElementById(id);
@@ -350,14 +358,14 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
     ctx.strokeStyle = colour; ctx.lineWidth = width; ctx.stroke();
   }
   function text(label, x, y, align = "left") {
-    ctx.fillStyle = "#d6b19d"; ctx.font = "11px Consolas, monospace"; ctx.textAlign = align;
+    ctx.fillStyle = "#c0ddea"; ctx.font = "11px Consolas, monospace"; ctx.textAlign = align;
     ctx.fillText(label, x, y);
   }
   function point(x, y) {
     ctx.beginPath(); ctx.arc(x,y,4,0,Math.PI*2);
-    ctx.fillStyle = "#ffdfbc"; ctx.fill();
+    ctx.fillStyle = "#efffff"; ctx.fill();
     ctx.beginPath(); ctx.arc(x,y,7,0,Math.PI*2);
-    ctx.strokeStyle = "#e99970a8"; ctx.lineWidth = 1; ctx.stroke();
+    ctx.strokeStyle = "#b5eeffbd"; ctx.lineWidth = 1; ctx.stroke();
   }
   function draw() {
     const w = canvas.clientWidth, h = canvas.clientHeight;
@@ -369,28 +377,28 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
       const pad = 28;
       const X = u => pad+(w-2*pad)*u;
       const Y = value => h-22-(h-43)*value/3.55;
-      for (let v=0; v<=3; v++) { line([[pad,Y(v)],[w-pad,Y(v)]],"#4b4948",0.7); text(String(v),pad-8,Y(v)+3,"right"); }
+      for (let v=0; v<=3; v++) { line([[pad,Y(v)],[w-pad,Y(v)]],"#344d70",0.7); text(String(v),pad-8,Y(v)+3,"right"); }
       for (let t=10; t<=28; t+=3) { const x=X((t-low)/(high-low)); text(String(t),x,h-6,"center"); }
-      line(trace.map((v,i) => [X(i/500),Y(v)]),"#ff9870",2);
+      line(trace.map((v,i) => [X(i/500),Y(v)]),"#a8e2fc",2);
       zeros.forEach(v => point(X((v-low)/(high-low)),Y(0)));
       text("|ζ(½ + it)|",pad,14); text("t",w-pad+13,h-6);
       return;
     }
     const project = (u,v,z) => [w*(.025+.725*u+.22*v), h*(.78+.16*u-.29*v-.58*z)];
-    for(let i=0;i<=16;i++) line([project(i/16,0,0),project(i/16,1,0)],"#6c595846",.7);
-    for(let j=0;j<=9;j++) line([project(0,j/9,0),project(1,j/9,0)],"#6c595846",.7);
+    for(let i=0;i<=16;i++) line([project(i/16,0,0),project(i/16,1,0)],"#6791bc68",.7);
+    for(let j=0;j<=9;j++) line([project(0,j/9,0),project(1,j/9,0)],"#6791bc68",.7);
     // Back-to-front strips hide the far side of each peak.
     for(let j=rows;j>0;j--) {
       const far = mesh[j].map((z,i)=>project(i/cols,j/rows,z));
       const near = mesh[j-1].map((z,i)=>project(i/cols,(j-1)/rows,z));
       ctx.beginPath(); far.forEach(([x,y],i)=>{if(i) ctx.lineTo(x,y); else ctx.moveTo(x,y);});
       for(let i=cols;i>=0;i--) ctx.lineTo(...near[i]);
-      ctx.closePath(); ctx.fillStyle="#242128"; ctx.fill();
+      ctx.closePath(); ctx.fillStyle="#102b50"; ctx.fill();
       for(let i=0;i<=cols;i+=2) {
         const z=mesh[j][i];
-        line([far[i],near[i]],"rgba(255,155,113,"+(.24+.58*z)+")",.82);
+        line([far[i],near[i]],"rgba(154,218,248,"+(.24+.58*z)+")",.82);
       }
-      if(j%2===0) line(near,"rgba(252,151,112,"+(.51+.2*(1-j/rows))+")",1);
+      if(j%2===0) line(near,"rgba(181,232,255,"+(.51+.2*(1-j/rows))+")",1);
     }
     zeros.forEach((zero,i)=>{
       const [x,y]=project((zero-low)/(high-low),(.5-realLow)/(realHigh-realLow),1);
