@@ -12,17 +12,17 @@
   <meta property="og:url" content="https://blueclarityone.github.io/math-timeline/">
   <meta property="og:title" content="What has AI already solved? | Blue Clarity">
   <meta property="og:description" content="Nine famous maths problems. Two proofs and one disproof with AI. Explore what’s still open and what’s at stake.">
-  <meta property="og:image" content="https://blueclarityone.github.io/math-timeline/proof-tracker-share.png?v=horizontal-1">
+  <meta property="og:image" content="https://blueclarityone.github.io/math-timeline/proof-tracker-share.png?v=overview-1">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="The Proof Tracker by Blue Clarity. What has AI already solved? Nine maths problems, two proofs, one disproof. A timeline marks the Erdős, cycle double cover and Riemann results in 2026.">
+  <meta property="og:image:alt" content="The Proof Tracker by Blue Clarity. What has AI already solved? Nine maths problems, two proofs, one disproof. A horizontal timeline spans 1859 to 2026, from Riemann’s original hypothesis to three AI-assisted results.">
   <meta name="twitter:creator" content="@blue_clarity">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="What has AI already solved? | Blue Clarity">
   <meta name="twitter:description" content="Nine famous maths problems. Two proofs and one disproof with AI. Explore what’s still open and what’s at stake.">
-  <meta name="twitter:image" content="https://blueclarityone.github.io/math-timeline/proof-tracker-share.png?v=horizontal-1">
-  <meta name="twitter:image:alt" content="The Proof Tracker by Blue Clarity. What has AI already solved? Nine maths problems, two proofs, one disproof. A timeline marks the Erdős, cycle double cover and Riemann results in 2026.">
+  <meta name="twitter:image" content="https://blueclarityone.github.io/math-timeline/proof-tracker-share.png?v=overview-1">
+  <meta name="twitter:image:alt" content="The Proof Tracker by Blue Clarity. What has AI already solved? Nine maths problems, two proofs, one disproof. A horizontal timeline spans 1859 to 2026, from Riemann’s original hypothesis to three AI-assisted results.">
   <link rel="icon" type="image/png" sizes="160x160" href="./clarity-mark.png">
   <link rel="preload" href="./assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <style>@font-face{font-family:Inter;src:url("./assets/inter-latin.woff2") format("woff2");font-style:normal;font-weight:100 900;font-display:swap}
@@ -55,46 +55,30 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 .hero h1 em,.stakes h2 em{color:var(--blue);font-style:normal;font-weight:480;letter-spacing:-.078em}
 .lede{max-width:46ch;font-size:clamp(1rem,1.35vw,1.2rem);line-height:1.52;color:#c5cdd6}
 .proof-link{display:inline-flex;gap:10px;align-items:center;margin-top:18px;padding-bottom:3px;border-bottom:1px solid #517c8f;text-decoration:none;font-weight:600;font-size:.95rem;color:#eaf8ff}.proof-link span{color:var(--blue)}
-.visually-hidden,.history-filter input{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-.proof-history{min-width:0;scroll-margin-top:16px;color:#f1f6fa;border-top:1px solid #395066;border-bottom:1px solid #35495a;background:linear-gradient(110deg,#132232,#0c1722 78%)}
-.history-header{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:16px 20px 0}
-.history-header h2{margin-right:auto;font-size:clamp(1.25rem,2vw,1.65rem);line-height:1.1;letter-spacing:-.05em;font-weight:600}
-.history-filter{display:flex;max-width:100%;min-width:0;gap:2px;margin:0;padding:2px;border:1px solid #395064;border-radius:4px;background:#09141e}
-.history-filter label{position:relative;cursor:pointer}.history-filter label>span{display:flex;align-items:center;gap:6px;border-radius:2px;padding:5px 9px;color:#bfceda;font:550 .82rem/1.3 var(--sans)}
-.history-filter b{font:500 .75rem var(--mono)}.history-filter input:checked+span{background:var(--blue);color:#102431}
-.history-filter input:focus-visible+span{outline:2px solid white;outline-offset:2px}
-.timeline-arrows{display:flex;gap:4px}.timeline-arrows[hidden]{display:none}.timeline-arrows button{width:34px;height:32px;display:grid;place-content:center;padding:0 0 3px;font:1.4rem/1 var(--sans);border:1px solid #597186;border-radius:3px;background:#102332;color:#eeffff;cursor:pointer}.timeline-arrows button:disabled{opacity:.35;cursor:default}
-.time-window{width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#506e84 #101d28}
-.time-window:focus-visible{outline:2px solid var(--blue);outline-offset:-3px}
-.time-chart{--axis-y:106px;position:relative;min-width:710px;height:220px;margin:0 16px}
-.axis{position:absolute;left:1%;right:1%;top:var(--axis-y);height:2px;background:linear-gradient(90deg,#507f97,#a8d8ea)}
-.axis::after{content:"";position:absolute;right:-1px;top:-3px;width:7px;height:7px;border-top:2px solid #a8d8ea;border-right:2px solid #a8d8ea;transform:rotate(45deg)}
-.calendar-ticks{position:absolute;inset:0;pointer-events:none}
-.calendar-ticks span{position:absolute;left:var(--at);top:calc(var(--axis-y) - 4px);bottom:4px;padding-top:88px;color:#adc0ce;font:.71rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase}
-.calendar-ticks span::before{content:"";position:absolute;left:0;top:0;height:9px;width:1px;background:#8aa9bc}
-.calendar-ticks span::after{content:"";position:absolute;left:0;bottom:24px;width:1px;height:5px;background:#456073}
-.milestones{list-style:none;margin:0;padding:0}
-.milestone{position:absolute;top:calc(var(--axis-y) + 1px);left:var(--featured-x);--stem:18px;--label-bottom:calc(16px + var(--stem));--label-top:auto;--stem-top:auto;--stem-bottom:16px;--anchor:auto;--start:16px;--align:left}
-.milestone a{position:relative;display:block;width:32px;height:32px;left:-16px;top:-16px;color:inherit;text-decoration:none}
-.pin{position:absolute;width:12px;height:12px;left:10px;top:10px;background:#142331;border:2px solid #a8d8ea;border-radius:50%;z-index:1}
-.resolution .pin{background:var(--mint);border-color:#0e1b27;box-shadow:0 0 0 1px var(--mint)}
-.milestone a::before{content:"";position:absolute;left:16px;top:var(--stem-top);bottom:var(--stem-bottom);height:calc(var(--stem) - 3px);width:1px;background:#7197a9}
-.pin-label{display:block;position:absolute;left:var(--start);right:var(--anchor);text-align:var(--align);bottom:var(--label-bottom);top:var(--label-top);width:max-content;max-width:234px}
-.pin-label time{display:block;color:var(--blue);font:.76rem/1.3 var(--mono);letter-spacing:.04em;text-transform:uppercase}
-.pin-label b{display:block;font-size:clamp(1rem,1.45vw,1.25rem);line-height:1.18;font-weight:620;letter-spacing:-.035em;margin:3px 0}
-.event-note{display:block;color:#bdcbd5;font-size:.8rem;line-height:1.35}
-.milestone a:hover b,.milestone a:focus-visible b{text-decoration:underline;text-underline-offset:3px;color:var(--blue)}
-.milestone a:focus-visible{outline:0}.milestone a:focus-visible .pin-label{outline:2px solid var(--blue);outline-offset:4px}
-.proof-history:has(input[value="resolutions"]:checked) .milestone:not(.resolution){display:none}
-.proof-history:has(input[value="resolutions"]:checked) .featured-below,.proof-history:has(input[value="all"]:checked) .all-below{--label-bottom:auto;--label-top:calc(16px + var(--stem));--stem-top:16px;--stem-bottom:auto}
-.proof-history:has(input[value="resolutions"]:checked) .featured-end,.proof-history:has(input[value="all"]:checked) .all-end{--anchor:16px;--start:auto;--align:right}
-.proof-history:has(input[value="all"]:checked) .time-chart{min-width:1600px;height:205px}
-.proof-history:has(input[value="all"]:checked) .milestone{left:var(--event-x)}
-.proof-history:has(input[value="all"]:checked) .calendar-ticks{display:none}
-.proof-history:has(input[value="all"]:checked) .milestone:first-child::after{content:"";position:absolute;left:100px;top:-5px;width:9px;height:11px;background:#11202d;border-inline:1px solid #94b2c5;transform:skewX(-25deg)}
-@media(max-width:720px){.hero-copy{display:block;margin:0}.history-header{gap:10px;padding:13px 12px 0}.history-header h2{font-size:1.25rem}.timeline-arrows{margin-left:auto}.time-chart{margin-inline:9px}.pin-label b{font-size:1.05rem}}
-@media(max-width:600px){.history-header{display:grid;grid-template-columns:1fr auto}.history-header h2{grid-row:1;grid-column:1}.history-filter{grid-row:2;grid-column:1/-1;justify-self:start}.timeline-arrows{grid-row:1;grid-column:2}.hero-intro .lede{max-width:48ch}}
-
+.proof-history{min-width:0;scroll-margin-top:16px;padding:16px 24px 7px;border-block:1px solid #35495a;color:#edf5fa;background:#101c28}
+.history-header{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.history-header h2{font-size:clamp(1.18rem,2vw,1.55rem);font-weight:600;line-height:1.15;letter-spacing:-.04em}
+.history-header>span{color:#a8c0d0;font:.86rem/1.4 var(--mono);white-space:nowrap}
+.history-scale{position:relative;container-type:inline-size;height:196px;margin-inline:5px}
+.history-axis{position:absolute;inset:50% 0 auto;height:1px;background:#799cad}
+.history-axis i{position:absolute;left:var(--at);top:-2px;width:1px;height:5px;background:#647e8f}
+.history-events{position:absolute;inset:0;list-style:none;margin:0;padding:0}
+.history-events li{--dot:#a8d8ea;position:absolute;left:var(--at);top:50%;width:0}
+.history-events li::before{content:"";position:absolute;bottom:0;left:0;width:1px;height:15px;background:#6e8c9e;pointer-events:none}
+.history-events li::after{content:"";position:absolute;left:-4px;top:-4px;width:9px;height:9px;border-radius:50%;background:var(--dot);box-shadow:0 0 0 2px #101c28;pointer-events:none}
+.history-events a{position:absolute;left:0;bottom:-4px;display:block;width:min(26vw,174px);width:min(29cqw,174px);padding:0 0 22px;text-align:center;transform:translateX(-50%);color:inherit;text-decoration:none}
+.history-events time{display:block;color:var(--dot);font:550 clamp(.95rem,1.7vw,1.3rem)/1.15 var(--mono);font-variant-numeric:tabular-nums}
+.history-events a span{display:block;margin-top:4px;font:550 clamp(.83rem,1.17vw,1rem)/1.25 var(--sans);letter-spacing:-.015em;text-wrap:balance}
+.history-events a:hover span,.history-events a:focus-visible span{text-decoration:underline;text-underline-offset:3px}
+.history-events li:nth-child(even) a{top:-4px;bottom:auto;padding:22px 0 0}
+.history-events li:nth-child(even)::before{top:0;bottom:auto}
+.history-events li:first-child a{text-align:left;transform:none}
+.history-events li:nth-last-child(2) a,.history-events li:last-child a{text-align:right;left:auto;right:0;transform:none}
+.history-events li:last-child{--dot:var(--mint)}
+.history-events li:last-child::after{box-shadow:0 0 0 2px #101c28,0 0 0 3px var(--mint)}
+.record-dates{list-style:none;padding:0;margin:.35em 0 .75em}.record-dates li{display:flex;gap:.65em;align-items:baseline;font-size:.875rem;line-height:1.45}.record-dates time{min-width:7.1em;color:var(--secondary);font:.78rem/1.4 var(--mono)}
+@media(max-width:720px){.hero-copy{display:block;margin:0}.proof-history{padding:13px 15px 3px}.history-scale{height:209px}.history-header h2{font-size:1.22rem}.history-header>span{font-size:.75rem}}
+@media(max-width:450px){.proof-history{padding-inline:11px}.history-scale{height:222px}.history-events a span{font-size:.8rem;line-height:1.25}.history-events time{font-size:.93rem}}
 .totals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #3b4854;padding:23px 0 27px;gap:18px}
 .stat{display:flex;flex-wrap:wrap;align-items:center;gap:8px clamp(10px,1.4vw,23px);text-decoration:none;position:relative;min-width:0}
 .stat+.stat{border-left:1px solid #303d49;padding-left:clamp(16px,3vw,53px)}
@@ -105,12 +89,6 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 .stat:hover b{text-decoration:underline;text-underline-offset:4px}.won strong{color:var(--mint)}.pending strong{color:var(--amber)}.prior strong{color:var(--lavender)}
 .catalogue{padding-block:48px 56px}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:25px}
 .overline{color:#31576e}.section-head h2{font-size:clamp(2rem,3.25vw,3.7rem);letter-spacing:-.065em;line-height:1.06;font-weight:650;margin-top:9px}
-.filters{position:relative}.filters>summary{border:1px solid #aeb5b3;display:inline-flex;gap:12px;align-items:center;border-radius:3px;padding:8px 13px;background:transparent;font-size:.9rem;font-weight:600;white-space:nowrap}
-.filters>summary::before{content:"";width:15px;height:13px;background:linear-gradient(#263234,#263234) 0 3px/100% 1px no-repeat,linear-gradient(#263234,#263234) 0 9px/100% 1px no-repeat,linear-gradient(#263234,#263234) 3px 1px/3px 5px no-repeat,linear-gradient(#263234,#263234) 9px 7px/3px 5px no-repeat}
-.filter-body{position:absolute;right:0;top:calc(100% + 8px);background:#fafcfd;z-index:4;border:1px solid #acb6b3;padding:18px;display:grid;gap:11px;width:min(290px,86vw);box-shadow:0 10px 32px #10192220}
-.filter-body label{display:grid;gap:3px;font-weight:600;font-size:.875rem}.filter-body input,.filter-body select{width:100%;padding:7px 8px;border:1px solid #a8b4b0;background:white;border-radius:2px;font-size:1rem}
-.filter-body button,.none button{justify-self:start;background:none;border:0;padding:2px 0;text-decoration:underline;text-underline-offset:3px;font-size:.9rem}
-.filter-feedback:empty{display:none}.filter-feedback{font-size:.875rem;margin-bottom:10px;color:var(--secondary)}
 .board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3.4vw,54px);align-items:start}.column{min-width:0}.group{scroll-margin-top:12px;min-width:0}
 .group h3{display:flex;align-items:center;gap:10px;font-size:1.25rem;font-weight:650;letter-spacing:-.045em;padding:10px 0 11px;border-top:3px solid var(--accent);border-bottom:1px solid var(--line)}
 .solved{--accent:#2e6a4b;--sub:#dceee3;--badge:#224d38}.open{--accent:#8c701b;--sub:#f4edc9;--badge:#665110}.human{--accent:#72618a;--sub:#e9e2ef;--badge:#524168;margin-top:24px}
@@ -127,7 +105,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 .record-body{padding:2px 16px 18px;border-left:2px solid var(--accent);margin:0 0 15px 2px}
 .record-body h4{font-size:.83rem;letter-spacing:.01em;margin:10px 0 3px}.record-body p{font-size:.97rem;line-height:1.5;color:#38444a;max-width:67ch}
 .sources{margin-top:10px}.sources summary{font-size:.85rem;font-weight:600;text-decoration:underline;text-underline-offset:3px}.sources ul{margin:7px 0 0;padding-left:18px}.sources a{font-size:.87rem;color:#25566f;text-underline-offset:3px}
-.none{padding-block:18px}
+
 .impact-compare{border:1px solid #beccd7;background:#e2ecf3;border-radius:3px;margin:0 0 22px;scroll-margin-top:14px}
 .impact-compare>summary{display:flex;align-items:center;gap:13px;min-height:48px;padding:10px 16px}
 .compare-title{display:inline-flex;align-items:center;gap:10px;font-size:1rem;font-weight:650;letter-spacing:-.025em}
@@ -164,8 +142,8 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 @media(max-width:720px){.wrap{width:calc(100% - 36px)}.nav{min-height:57px;justify-content:space-between;gap:12px}.nav nav{gap:15px}.nav nav a{font-size:.85rem}.edition{display:none}.brand{font-size:1.1rem;gap:7px}.hero{grid-template-columns:1fr;padding:28px 0 18px}.hero-copy{z-index:1}.hero h1{font-size:clamp(3.1rem,10.9vw,5.15rem);margin:13px 0 15px}.lede{max-width:49ch;font-size:1rem}.proof-link{margin-top:13px}
 .totals{gap:10px;padding:15px 0 19px}.stat{display:block}.score-strip{display:flex;margin-bottom:9px;gap:2px}.score-strip i{width:6px}.stat+.stat{padding-left:12px}.stat strong{font-size:2.55rem}.stat b{font-size:.95rem;line-height:1.15;margin-top:5px}.stat small{display:none}
 .catalogue{padding:32px 0 38px}.section-head{align-items:flex-start;margin-bottom:19px}.section-head h2{font-size:2.1rem}.board{display:flex;flex-direction:column;gap:23px}.column{display:contents}.group{width:100%}.solved{order:1}.open{order:2}.human{order:3;margin:0}
-.record>summary{grid-template-columns:1fr auto 12px;gap:9px}.record>summary .status{grid-row:auto;grid-column:auto}.toggle{grid-column:auto;grid-row:auto}.record-name{font-size:1.05rem}.question{font-size:.92rem}.filters>summary{padding:6px 8px;font-size:.81rem}.stake-grid{grid-template-columns:1fr;gap:24px;padding-block:33px}.foot{gap:15px}.foot details[open]{max-width:62%}}
-@media(max-width:450px){.nav nav{gap:11px}.section-head{flex-wrap:wrap;align-items:flex-end;gap:12px}.filter-body{left:0;right:auto}.section-head .filters{margin-left:0}.section-head:has(.filters[open]){display:block}.section-head .filters[open]{margin-top:12px}.record>summary{grid-template-columns:1fr 14px;row-gap:6px}.record>summary .status{grid-column:1;grid-row:2}.toggle{grid-column:2;grid-row:1/3}.foot{flex-wrap:wrap}.foot details[open]{max-width:100%}.foot details[open] summary{text-align:left}}
+.record>summary{grid-template-columns:1fr auto 12px;gap:9px}.record>summary .status{grid-row:auto;grid-column:auto}.toggle{grid-column:auto;grid-row:auto}.record-name{font-size:1.05rem}.question{font-size:.92rem}.stake-grid{grid-template-columns:1fr;gap:24px;padding-block:33px}.foot{gap:15px}.foot details[open]{max-width:62%}}
+@media(max-width:450px){.nav nav{gap:11px}.section-head{flex-wrap:wrap;align-items:flex-end;gap:12px}.record>summary{grid-template-columns:1fr 14px;row-gap:6px}.record>summary .status{grid-column:1;grid-row:2}.toggle{grid-column:2;grid-row:1/3}.foot{flex-wrap:wrap}.foot details[open]{max-width:100%}.foot details[open] summary{text-align:left}}
 @media(max-width:350px){.wrap{width:calc(100% - 26px)}.nav{gap:5px}.nav nav{gap:7px}.nav nav a{font-size:.79rem}.brand{font-size:1rem}.hero h1{font-size:2.85rem}}
 @media(max-width:720px){
    .night>.wrap{display:grid;grid-template-columns:minmax(0,1fr)}.night .hero{display:contents}.hero-copy{grid-row:1;padding:28px 0 19px}
@@ -174,8 +152,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 @media(max-width:720px){.brand img{width:32px;height:32px}.brand-type{gap:3px}.owner{font-size:.61rem}.publication{font-size:.96rem}.nav{min-height:62px}.nav nav a{font-size:.8rem}.hero{gap:0}}
 @media(max-width:380px){.nav nav{gap:9px}.nav nav a{font-size:.74rem}.publication{font-size:.85rem}.brand img{width:29px;height:29px}.stat .denominator{font-size:.62rem}.stat b{font-size:.84rem}}
 @media(max-width:350px){.nav{flex-wrap:wrap;justify-content:flex-start;gap:8px 20px;padding-block:10px}.nav nav{gap:14px}.nav nav a{padding-block:3px}}
-@media(max-width:360px){.history-filter label>span{font-size:.82rem;gap:4px;padding:5px 7px}}
-@media print{.filters,.proof-link,.nav nav,footer,.skip{display:none}.night,.mast,.stakes{background:white;color:black}.hero h1 em,.stat b,.stat small,.lede,.stake-text p{color:#222}.catalogue{padding-block:20px}}
+@media print{.proof-link,.nav nav,footer,.skip{display:none}.night,.mast,.stakes{background:white;color:black}.hero h1 em,.stat b,.stat small,.lede,.stake-text p{color:#222}.catalogue{padding-block:20px}}
 </style>
 </head>
 <body id="top">
@@ -198,31 +175,14 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
             <a class="proof-link" href="#problem/riemann">Read the Riemann result <span aria-hidden="true">↗</span></a></div>
           </div>
           <section class="proof-history" id="timeline" aria-labelledby="timeline-title">
-            <div class="history-header">
-              <h2 id="timeline-title">Proof timeline</h2>
-              <fieldset class="history-filter">
-                <legend class="visually-hidden">Milestones to show</legend>
-                <label><input type="radio" name="milestones" value="resolutions" checked><span>AI resolutions <b>3</b></span></label>
-                <label><input type="radio" name="milestones" value="all"><span>All milestones <b>8</b></span></label>
-              </fieldset>
-              <div class="timeline-arrows" hidden>
-                <button type="button" data-pan="-1" aria-label="Earlier on the timeline" aria-controls="time-window">‹</button>
-                <button type="button" data-pan="1" aria-label="Later on the timeline" aria-controls="time-window">›</button>
-              </div>
-            </div>
-            <div id="time-window" class="time-window" role="region" aria-label="Scrollable chronological timeline" tabindex="0">
-              <div class="time-chart">
-                <div class="axis" aria-hidden="true"></div>
-                <div class="calendar-ticks" aria-hidden="true"><span style="--at:3.00%">May</span><span style="--at:16.62%">Jun</span><span style="--at:29.79%">Jul</span><span style="--at:43.41%">Aug</span><span style="--at:57.03%">Sept</span><span style="--at:70.21%">Oct</span><span style="--at:83.82%">Nov</span></div>
-                <ol class="milestones" aria-label="Milestones from earliest to latest"><li class="milestone all-above" style="--event-x:3.00%"><a href="#problem/poincare" title="Clay awards the Millennium Prize for Perelman’s proof."><span class="pin" aria-hidden="true"></span><span class="pin-label"><time datetime="2010">2010</time><b>Poincaré conjecture</b><span class="event-note">Millennium Prize awarded</span></span></a></li>
-<li class="milestone all-below resolution featured-above" style="--featured-x:11.35%;--event-x:16.43%"><a href="#problem/unit-distance" title="An AI finds a counterexample to Erdős’s conjecture."><span class="pin" aria-hidden="true"></span><span class="pin-label"><time datetime="2026-05-20">20 May 2026</time><b>Erdős unit distance</b><span class="event-note">AI counterexample found</span></span></a></li>
-<li class="milestone all-above resolution featured-below" style="--featured-x:29.79%;--event-x:29.86%"><a href="#problem/cycle-cover" title="Graph theorists publish independent accounts of the AI’s proof."><span class="pin" aria-hidden="true"></span><span class="pin-label"><time datetime="2026-07">Jul 2026</time><b>Cycle double cover</b><span class="event-note">Independent accounts published</span></span></a></li>
-<li class="milestone all-below" style="--event-x:43.29%"><a href="#problem/navier-stokes" title="OpenAI proposes a fluid singularity. Researchers later challenge the argument."><span class="pin" aria-hidden="true"></span><span class="pin-label"><time datetime="2026-09-08">8 Sept 2026</time><b>Navier–Stokes</b><span class="event-note">Singularity proposed</span></span></a></li>
-<li class="milestone all-above" style="--event-x:56.71%"><a href="#problem/yang-mills" title="A working group checks the construction. The mass gap stays open."><span class="pin" aria-hidden="true"></span><span class="pin-label"><time datetime="2026-11-10">10 Nov 2026</time><b>Yang–Mills &amp; the mass gap</b><span class="event-note">Partial result checked</span></span></a></li>
-<li class="milestone all-below" style="--event-x:70.14%"><a href="#problem/navier-stokes" title="A second claim covers fluid flow without an external force. Review continues."><span class="pin" aria-hidden="true"></span><span class="pin-label"><time datetime="2026-11-20">20 Nov 2026</time><b>Navier–Stokes</b><span class="event-note">Second claim under review</span></span></a></li>
-<li class="milestone all-above" style="--event-x:83.57%"><a href="#problem/riemann" title="Levent Alpöge releases the formal proof."><span class="pin" aria-hidden="true"></span><span class="pin-label"><time datetime="2026-11-20">20 Nov 2026</time><b>Riemann hypothesis</b><span class="event-note">Formal proof released</span></span></a></li>
-<li class="milestone all-below resolution featured-above featured-end all-end" style="--featured-x:92.61%;--event-x:97.00%"><a href="#problem/riemann" title="Independent teams check the proof developed with Claude."><span class="pin" aria-hidden="true"></span><span class="pin-label"><time datetime="2026-11-21">21 Nov 2026</time><b>Riemann hypothesis</b><span class="event-note">Proof independently checked</span></span></a></li></ol>
-              </div>
+            <div class="history-header"><h2 id="timeline-title">Proof timeline</h2><span>1859–2026</span></div>
+            <div class="history-scale">
+              <div class="history-axis" aria-hidden="true"><i style="--at:0.60%"></i><i style="--at:6.59%"></i><i style="--at:12.57%"></i><i style="--at:18.56%"></i><i style="--at:24.55%"></i><i style="--at:30.54%"></i><i style="--at:36.53%"></i><i style="--at:42.51%"></i><i style="--at:48.50%"></i><i style="--at:54.49%"></i><i style="--at:60.48%"></i><i style="--at:66.47%"></i><i style="--at:72.46%"></i><i style="--at:78.44%"></i><i style="--at:84.43%"></i><i style="--at:90.42%"></i><i style="--at:96.41%"></i></div>
+              <ol class="history-events" aria-label="Selected milestones in chronological order"><li style="--at:0.00%"><a href="#problem/riemann"><time datetime="1859">1859</time><span>Riemann proposes his hypothesis</span></a></li>
+<li style="--at:26.95%"><a href="#problem/poincare"><time datetime="1904">1904</time><span>Poincaré poses his conjecture</span></a></li>
+<li style="--at:52.10%"><a href="#problem/unit-distance"><time datetime="1946">1946</time><span>Erdős asks about unit distances</span></a></li>
+<li style="--at:86.23%"><a href="#problem/poincare"><time datetime="2003">2002–03</time><span>Perelman proves Poincaré</span></a></li>
+<li style="--at:100.00%"><a href="#solved"><time datetime="2026">2026</time><span>AI helps settle three problems</span></a></li></ol>
             </div>
           </section>
         </section>
@@ -235,14 +195,6 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
     </div>
     <section id="index" class="wrap catalogue" aria-labelledby="index-title">
       <div class="section-head"><div><p class="overline">Problem index</p><h2 id="index-title">Nine problems at a glance.</h2></div>
-        <details class="filters" id="filters"><summary>Filter problems</summary>
-          <div class="filter-body">
-            <label>Find a problem<input id="search" type="search" placeholder="Name, topic or researcher"></label>
-            <label>Evidence<select id="status"><option value="">All evidence</option><option value="verified">Formally verified</option><option value="proved">Proved</option><option value="disproved">Disproved</option><option value="review">Claim under review</option><option value="partial">Partial result</option><option value="open">Open</option></select></label>
-            <label>Collection<select id="collection"><option value="">All collections</option><option value="millennium">Millennium Prize Problems</option><option value="beyond">Other conjectures</option></select></label>
-            <button type="button" data-reset>Clear filters</button>
-          </div>
-        </details>
       </div>
       <details class="impact-compare" id="impact">
         <summary><span class="compare-title"><span class="compare-icon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Compare world impact</span><span class="scale-range">Editorial scale · 1–5</span><span class="toggle" aria-hidden="true"></span></summary>
@@ -255,24 +207,24 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 <li class="impact-tier"><div class="tier-info"><span class="tier-number">1<small>/5</small></span><div><h3>One question</h3><p>Changes a specific answer or bound.</p></div></div><ul><li><a href="#problem/unit-distance">Erdős unit distance</a> <span class="impact-outcome">Settled with AI</span><p>A family of point patterns overturned a predicted limit. The true maximum is still unknown.</p></li></ul></li></ol>
         </div>
       </details>
-      <p class="filter-feedback" id="match-status" aria-live="polite"></p>
+
       <div class="board">
         <div class="column">
           <section class="group solved" id="solved" aria-labelledby="solved-title"><h3 id="solved-title"><span class="state-icon check" aria-hidden="true"></span>Settled with AI</h3><details class="record" id="problem/riemann" data-status="verified" data-collection="millennium" data-keywords="Riemann hypothesis Number theory Levent Alpöge + Claude">
   <summary><span><span class="record-name">Riemann hypothesis</span><span class="question">How far can the count of prime numbers stray from the pattern we expect?</span><span class="impact-line"><span class="impact-meter" aria-hidden="true"><i class="filled"></i><i class="filled"></i><i class="filled"></i><i class="empty"></i><i class="empty"></i></span><span>Impact <b>3/5</b> · Several research areas</span></span></span><span class="status">Verified proof</span><span class="toggle" aria-hidden="true"></span></summary>
-  <div class="record-body"><h4>What we know</h4><p>Levent Alpöge worked with Claude to prove the prediction. Independent teams checked both the argument and the exact question it answers. Clay’s prize review is separate.</p><h4>Why it matters</h4><p>Mathematicians can use that limit on how unevenly primes are spread. Many results that assumed the limit now have a checked foundation.</p><details class="sources"><summary>See the evidence</summary><ul><li><a href="https://leanprover-community.github.io/blog/posts/riemann-hypothesis/">Lean &amp; Mathlib community · Independent verification</a></li><li><a href="https://math.mit.edu/~drew/grh/">Andrew Sutherland · MIT · Verification files and logs</a></li><li><a href="https://www.math.uwaterloo.ca/~mrubinst/alpoge_claude_grh/">Michael Rubinstein · Waterloo · Author attribution and reader’s guide</a></li><li><a href="https://www.claymath.org/millennium/riemann-hypothesis/">Clay Mathematics Institute · Original problem</a></li><li><a href="https://dlmf.nist.gov/25.10">NIST · Zeros of Riemann’s zeta function</a></li></ul></details></div>
+  <div class="record-body"><h4>What we know</h4><p>Levent Alpöge worked with Claude to prove the prediction. Independent teams checked both the argument and the exact question it answers. Clay’s prize review is separate.</p><h4>Why it matters</h4><p>Mathematicians can use that limit on how unevenly primes are spread. Many results that assumed the limit now have a checked foundation.</p><h4>Key dates</h4><ul class="record-dates"><li><time datetime="2026-11-20">20 Nov 2026</time> Formal proof released</li><li><time datetime="2026-11-21">21 Nov 2026</time> Proof independently checked</li></ul><details class="sources"><summary>See the evidence</summary><ul><li><a href="https://leanprover-community.github.io/blog/posts/riemann-hypothesis/">Lean &amp; Mathlib community · Independent verification</a></li><li><a href="https://math.mit.edu/~drew/grh/">Andrew Sutherland · MIT · Verification files and logs</a></li><li><a href="https://www.math.uwaterloo.ca/~mrubinst/alpoge_claude_grh/">Michael Rubinstein · Waterloo · Author attribution and reader’s guide</a></li><li><a href="https://www.claymath.org/millennium/riemann-hypothesis/">Clay Mathematics Institute · Original problem</a></li><li><a href="https://www.claymath.org/collections/riemanns-1859-manuscript/">Clay Mathematics Institute · Riemann’s 1859 manuscript</a></li></ul></details></div>
 </details>
 <details class="record" id="problem/unit-distance" data-status="disproved" data-collection="beyond" data-keywords="Erdős unit-distance conjecture Discrete geometry OpenAI">
   <summary><span><span class="record-name">Erdős unit distance</span><span class="question">Can an arrangement of dots beat Erdős’s predicted limit on pairs exactly one unit apart?</span><span class="impact-line"><span class="impact-meter" aria-hidden="true"><i class="filled"></i><i class="empty"></i><i class="empty"></i><i class="empty"></i><i class="empty"></i></span><span>Impact <b>1/5</b> · One question</span></span></span><span class="status">Disproved</span><span class="toggle" aria-hidden="true"></span></summary>
-  <div class="record-body"><h4>What we know</h4><p>Yes. An OpenAI model found a family of arrangements with more such pairs than the conjecture allowed. Nine mathematicians checked the counterexample.</p><h4>Why it matters</h4><p>A prediction from 1946 failed. Geometers now have a higher minimum for what is achievable. The maximum is still unknown.</p><details class="sources"><summary>See the evidence</summary><ul><li><a href="https://arxiv.org/abs/2605.20695">Noga Alon and co-authors · Independent companion paper</a></li><li><a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/">OpenAI · Construction and announcement</a></li></ul></details></div>
+  <div class="record-body"><h4>What we know</h4><p>Yes. An OpenAI model found a family of arrangements with more such pairs than the conjecture allowed. Nine mathematicians checked the counterexample.</p><h4>Why it matters</h4><p>A prediction from 1946 failed. Geometers now have a higher minimum for what is achievable. The maximum is still unknown.</p><h4>Key dates</h4><ul class="record-dates"><li><time datetime="2026-05-20">20 May 2026</time> AI counterexample found</li></ul><details class="sources"><summary>See the evidence</summary><ul><li><a href="https://arxiv.org/abs/2605.20695">Noga Alon and co-authors · Independent companion paper</a></li><li><a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/">OpenAI · Construction and announcement</a></li><li><a href="https://doi.org/10.1080/00029890.1946.11991674">Paul Erdős · On Sets of Distances of n Points (1946)</a></li></ul></details></div>
 </details>
 <details class="record" id="problem/cycle-cover" data-status="proved" data-collection="beyond" data-keywords="Cycle double cover conjecture Graph theory OpenAI">
   <summary><span><span class="record-name">Cycle double cover</span><span class="question">Can loops cover every link in a network exactly twice?</span><span class="impact-line"><span class="impact-meter" aria-hidden="true"><i class="filled"></i><i class="filled"></i><i class="empty"></i><i class="empty"></i><i class="empty"></i></span><span>Impact <b>2/5</b> · One research area</span></span></span><span class="status">Proved</span><span class="toggle" aria-hidden="true"></span></summary>
-  <div class="record-body"><h4>What we know</h4><p>An OpenAI model proved this works whenever removing a single link cannot disconnect the network. Graph theorists published independent accounts of the proof.</p><h4>Why it matters</h4><p>Researchers can now rely on this property for every network of that kind, however large or tangled it gets.</p><details class="sources"><summary>See the evidence</summary><ul><li><a href="https://arxiv.org/abs/2607.16356">Sang-il Oum · Independent exposition</a></li><li><a href="https://arxiv.org/abs/2607.15399">Independent exposition · OpenAI’s proof of the Cycle Double Cover Theorem</a></li></ul></details></div>
+  <div class="record-body"><h4>What we know</h4><p>An OpenAI model proved this works whenever removing a single link cannot disconnect the network. Graph theorists published independent accounts of the proof.</p><h4>Why it matters</h4><p>Researchers can now rely on this property for every network of that kind, however large or tangled it gets.</p><h4>Key dates</h4><ul class="record-dates"><li><time datetime="2026-07">Jul 2026</time> Independent accounts published</li></ul><details class="sources"><summary>See the evidence</summary><ul><li><a href="https://arxiv.org/abs/2607.16356">Sang-il Oum · Independent exposition</a></li><li><a href="https://arxiv.org/abs/2607.15399">Independent exposition · OpenAI’s proof of the Cycle Double Cover Theorem</a></li></ul></details></div>
 </details></section>
           <section class="group human" id="human" aria-labelledby="human-title"><h3 id="human-title"><span class="state-icon human-icon" aria-hidden="true"></span>Solved without AI</h3><details class="record" id="problem/poincare" data-status="proved" data-collection="millennium" data-keywords="Poincaré conjecture Topology Human proof · Grigori Perelman">
   <summary><span><span class="record-name">Poincaré conjecture</span><span class="question">If every loop in a closed 3D space can shrink to a point, must that space be a 3D sphere?</span><span class="impact-line"><span class="impact-meter" aria-hidden="true"><i class="filled"></i><i class="filled"></i><i class="filled"></i><i class="empty"></i><i class="empty"></i></span><span>Impact <b>3/5</b> · Several research areas</span></span></span><span class="status">Human proof</span><span class="toggle" aria-hidden="true"></span></summary>
-  <div class="record-body"><h4>What we know</h4><p>Grigori Perelman published the proof in 2002–03. Mathematicians checked it over several years. Clay awarded the Millennium Prize in 2010.</p><h4>Why it matters</h4><p>His work settled how to recognise the three-dimensional sphere and helped classify the possible shapes of three-dimensional spaces.</p><details class="sources"><summary>See the evidence</summary><ul><li><a href="https://www.claymath.org/millennium/poincare-conjecture/">Clay Mathematics Institute · Perelman’s solution and papers</a></li><li><a href="https://www.claymath.org/resource/ricci-flow-and-the-poincare-conjecture/">Clay Mathematics Institute · Ricci flow and the proof</a></li></ul></details></div>
+  <div class="record-body"><h4>What we know</h4><p>Grigori Perelman published the proof in 2002–03. Mathematicians checked it over several years. Clay awarded the Millennium Prize in 2010.</p><h4>Why it matters</h4><p>His work settled how to recognise the three-dimensional sphere and helped classify the possible shapes of three-dimensional spaces.</p><h4>Key dates</h4><ul class="record-dates"><li><time datetime="2010">2010</time> Millennium Prize awarded</li></ul><details class="sources"><summary>See the evidence</summary><ul><li><a href="https://www.claymath.org/millennium/poincare-conjecture/">Clay Mathematics Institute · Perelman’s solution and papers</a></li><li><a href="https://www.claymath.org/resource/ricci-flow-and-the-poincare-conjecture/">Clay Mathematics Institute · Ricci flow and the proof</a></li></ul></details></div>
 </details></section>
         </div>
         <section class="group open" id="open" aria-labelledby="open-title"><h3 id="open-title"><span class="state-icon ring" aria-hidden="true"></span>Still open</h3><details class="record" id="problem/p-np" data-status="open" data-collection="millennium" data-keywords="P versus NP Computer science General problem open">
@@ -281,11 +233,11 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 </details>
 <details class="record" id="problem/navier-stokes" data-status="review" data-collection="millennium" data-keywords="Navier–Stokes existence and smoothness Fluid dynamics OpenAI · Alpöge &amp; Buckmaster">
   <summary><span><span class="record-name">Navier–Stokes</span><span class="question">Can the equations for a smoothly moving fluid break down?</span><span class="impact-line"><span class="impact-meter" aria-hidden="true"><i class="filled"></i><i class="filled"></i><i class="filled"></i><i class="filled"></i><i class="empty"></i></span><span>Potential impact <b>4/5</b> · Applied models</span></span></span><span class="status">Under review</span><span class="toggle" aria-hidden="true"></span></summary>
-  <div class="record-body"><h4>What we know</h4><p>Researchers challenged part of OpenAI’s September proof. A separate November claim for flow without an external force still lacks the public numerical evidence needed for a full check.</p><h4>Why it matters</h4><p>Engineers use these equations to model air and water. A verified breakdown would reveal a limit of the equations themselves, even with perfect starting data.</p><details class="sources"><summary>See the evidence</summary><ul><li><a href="https://openai.com/index/navier-stokes-solution/">OpenAI · September construction</a></li><li><a href="https://www.kcl.ac.uk/news/openais-navier-stokes-proof-called-into-question">King’s College London · Independent assessment</a></li><li><a href="https://github.com/tristanbuckmaster/navier-stokes">Alpöge &amp; Buckmaster · November paper and verification limits</a></li><li><a href="https://www.claymath.org/millennium/navier-stokes-equation/">Clay Mathematics Institute · Problem statement</a></li></ul></details></div>
+  <div class="record-body"><h4>What we know</h4><p>Researchers challenged part of OpenAI’s September proof. A separate November claim for flow without an external force still lacks the public numerical evidence needed for a full check.</p><h4>Why it matters</h4><p>Engineers use these equations to model air and water. A verified breakdown would reveal a limit of the equations themselves, even with perfect starting data.</p><h4>Key dates</h4><ul class="record-dates"><li><time datetime="2026-09-08">8 Sept 2026</time> Singularity proposed</li><li><time datetime="2026-11-20">20 Nov 2026</time> Second claim under review</li></ul><details class="sources"><summary>See the evidence</summary><ul><li><a href="https://openai.com/index/navier-stokes-solution/">OpenAI · September construction</a></li><li><a href="https://www.kcl.ac.uk/news/openais-navier-stokes-proof-called-into-question">King’s College London · Independent assessment</a></li><li><a href="https://github.com/tristanbuckmaster/navier-stokes">Alpöge &amp; Buckmaster · November paper and verification limits</a></li><li><a href="https://www.claymath.org/millennium/navier-stokes-equation/">Clay Mathematics Institute · Problem statement</a></li></ul></details></div>
 </details>
 <details class="record" id="problem/yang-mills" data-status="partial" data-collection="millennium" data-keywords="Yang–Mills existence and mass gap Mathematical physics OpenAI">
   <summary><span><span class="record-name">Yang–Mills &amp; the mass gap</span><span class="question">Why does it take a minimum amount of energy to excite a quantum field?</span><span class="impact-line"><span class="impact-meter" aria-hidden="true"><i class="filled"></i><i class="filled"></i><i class="filled"></i><i class="empty"></i><i class="empty"></i></span><span>Potential impact <b>3/5</b> · Several research areas</span></span></span><span class="status">Partial result</span><span class="toggle" aria-hidden="true"></span></summary>
-  <div class="record-body"><h4>What we know</h4><p>An independent group checked OpenAI’s construction of the theory. The second part of the problem remains open. It asks for a proof that the smallest excitation needs more than zero energy.</p><h4>Why it matters</h4><p>Physicists use these theories to describe fundamental forces. A proof would explain an energy threshold that experiments and simulations lead them to expect.</p><details class="sources"><summary>See the evidence</summary><ul><li><a href="https://github.com/yang-mills-group/YM">Yang–Mills Working Group · Assessment and verification records</a></li><li><a href="https://www.kitp.ucsb.edu/statement-by-the-yangmills-working-group">Kavli Institute for Theoretical Physics · Working group statement</a></li><li><a href="https://www.claymath.org/millennium/yang-mills-the-maths-gap/">Clay Mathematics Institute · Original problem</a></li></ul></details></div>
+  <div class="record-body"><h4>What we know</h4><p>An independent group checked OpenAI’s construction of the theory. The second part of the problem remains open. It asks for a proof that the smallest excitation needs more than zero energy.</p><h4>Why it matters</h4><p>Physicists use these theories to describe fundamental forces. A proof would explain an energy threshold that experiments and simulations lead them to expect.</p><h4>Key dates</h4><ul class="record-dates"><li><time datetime="2026-11-10">10 Nov 2026</time> Partial result checked</li></ul><details class="sources"><summary>See the evidence</summary><ul><li><a href="https://github.com/yang-mills-group/YM">Yang–Mills Working Group · Assessment and verification records</a></li><li><a href="https://www.kitp.ucsb.edu/statement-by-the-yangmills-working-group">Kavli Institute for Theoretical Physics · Working group statement</a></li><li><a href="https://www.claymath.org/millennium/yang-mills-the-maths-gap/">Clay Mathematics Institute · Original problem</a></li></ul></details></div>
 </details>
 <details class="record" id="problem/hodge" data-status="open" data-collection="millennium" data-keywords="Hodge conjecture Algebraic geometry General problem open">
   <summary><span><span class="record-name">Hodge conjecture</span><span class="question">Can certain hidden features of a shape be built from simpler shapes defined by equations?</span><span class="impact-line"><span class="impact-meter" aria-hidden="true"><i class="filled"></i><i class="filled"></i><i class="filled"></i><i class="empty"></i><i class="empty"></i></span><span>Potential impact <b>3/5</b> · Several research areas</span></span></span><span class="status">Open</span><span class="toggle" aria-hidden="true"></span></summary>
@@ -296,7 +248,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
   <div class="record-body"><h4>What we know</h4><p>The conjecture predicts how many independent rational points an elliptic curve has. Mathematicians have proved important cases. The prediction for all such curves remains open.</p><h4>Why it matters</h4><p>A proof would connect a question about fractions to a quantity mathematicians can study using calculus.</p><details class="sources"><summary>See the evidence</summary><ul><li><a href="https://www.claymath.org/millennium/birch-and-swinnerton-dyer-conjecture/">Clay Mathematics Institute · Birch and Swinnerton-Dyer conjecture</a></li></ul></details></div>
 </details></section>
       </div>
-      <p class="none" id="no-results" hidden>No matching problems. <button type="button" data-reset>Show all nine</button></p>
+
     </section>
     <section id="stakes" class="stakes" aria-labelledby="stakes-title">
       <div class="wrap stake-grid">
@@ -311,83 +263,18 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
   <footer><div class="wrap foot"><a class="brand" href="#top"><img src="./clarity-mark.png" width="38" height="38" alt=""><span class="brand-type"><span class="owner">Blue Clarity</span><span class="publication">The Proof Tracker</span></span></a><details id="methodology"><summary>How we count</summary><p>We track the seven Millennium Prize Problems and two other conjectures. A checked proof or counterexample counts as a resolution. Claims under review and partial results stay open. Each entry links to its evidence. Clay awards prizes through a separate review.</p><a href="https://www.claymath.org/millennium-problems/rules/">Clay’s prize rules</a></details></div></footer>
   <script>"use strict";
 (() => {
-  const get = id => document.getElementById(id);
-  const rows = [...document.querySelectorAll(".record")];
-  const groups = [...document.querySelectorAll(".group")];
-  const search = get("search");
-  const status = get("status");
-  const collection = get("collection");
-  const normalise = text => text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[‐‑–—-]/g, " ");
-  const searchTerms = rows.map(row => normalise(row.textContent + " " + row.dataset.keywords));
-
-  const timeline = get("time-window");
-  const panControls = document.querySelector(".timeline-arrows");
-  const [earlier, later] = panControls.querySelectorAll("button");
-  function updateTimelineControls() {
-    const end = timeline.scrollWidth - timeline.clientWidth;
-    panControls.hidden = end < 2;
-    earlier.disabled = timeline.scrollLeft < 2;
-    later.disabled = timeline.scrollLeft >= end - 2;
-  }
-  panControls.addEventListener("click", event => {
-    const button = event.target.closest("button[data-pan]");
-    if (!button) return;
-    const step = timeline.clientWidth * .8 * Number(button.dataset.pan);
-    timeline.scrollBy({left:step,behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth"});
-  });
-  document.querySelector(".history-filter").addEventListener("change", () => {
-    timeline.scrollLeft = 0;
-    updateTimelineControls();
-  });
-  timeline.addEventListener("scroll",updateTimelineControls,{passive:true});
-  window.addEventListener("resize",updateTimelineControls);
-  updateTimelineControls();
-
-  function applyFilters() {
-    const term = normalise(search.value.trim());
-    let count = 0;
-    rows.forEach((row, index) => {
-      row.hidden = !searchTerms[index].includes(term)
-        || (status.value && row.dataset.status !== status.value)
-        || (collection.value && row.dataset.collection !== collection.value);
-      if (!row.hidden) count++;
-    });
-    groups.forEach(group => { group.hidden = !group.querySelector(".record:not([hidden])"); });
-    get("no-results").hidden = count !== 0;
-    get("match-status").textContent = term || status.value || collection.value ? count + " of 9 problems shown" : "";
-  }
-  function clearFilters() {
-    search.value = status.value = collection.value = "";
-    applyFilters();
-  }
-  search.addEventListener("input", applyFilters);
-  status.addEventListener("change", applyFilters);
-  collection.addEventListener("change", applyFilters);
-  document.querySelectorAll("[data-reset]").forEach(button => button.addEventListener("click", clearFilters));
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape" && get("filters").open) {
-      get("filters").open = false;
-      get("filters").querySelector("summary").focus();
-    }
-  });
-  document.addEventListener("click", event => {
-    if (!get("filters").contains(event.target)) get("filters").open = false;
-    const link = event.target.closest("a[href^='#']");
-    if (!link || event.ctrlKey || event.shiftKey || event.altKey || event.metaKey) return;
-    if (link.classList.contains("stat")) clearFilters();
-    if (link.hash === location.hash) followLink();
-  });
   function followLink() {
     const target = document.getElementById(location.hash.slice(1));
-    if (!target) return;
-    if (target.classList.contains("group")) clearFilters();
-    if (target.tagName !== "DETAILS") return;
-    if (target.classList.contains("record") && target.hidden) clearFilters();
+    if (!target || target.tagName !== "DETAILS") return;
     target.open = true;
     target.scrollIntoView({block:"start"});
     target.querySelector("summary").focus({preventScroll:true});
   }
-  window.addEventListener("hashchange", followLink);
+  document.addEventListener("click", event => {
+    const link = event.target.closest("a[href^='#']");
+    if (link && link.hash === location.hash && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) followLink();
+  });
+  window.addEventListener("hashchange",followLink);
   if (location.hash) requestAnimationFrame(followLink);
 })();
 </script>
